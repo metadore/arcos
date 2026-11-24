@@ -18,7 +18,7 @@
 
 
 
-# 🌀 ARCOISTRY
+# 🌀 ARCOS
 
 
 
@@ -122,7 +122,7 @@
 
 
 
-Arcoistry is a personal digital space where **art, code, research, experiments and unfinished ideas** coexist.
+Arcos is a personal digital space where **art, code, research, experiments and unfinished ideas** coexist.
 
 
 
