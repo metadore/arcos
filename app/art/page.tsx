@@ -68,7 +68,7 @@ const COLORS = [
 
 const ART_CARDS: ArtCard[] = Array.from({ length: 15 }, (_, i) => ({
   id: i + 1,
-  title: `Arcoistry Artifact #${i + 1}`,
+  title: `Arcos Artifact #${i + 1}`,
   story: ART_STORIES[i % ART_STORIES.length].story,
   about: ART_STORIES[i % ART_STORIES.length].about,
   image: `/images/art/art_${i + 1}.jpeg`,
@@ -161,7 +161,7 @@ export default function ArtPage() {
                   I spend 90% of my time arguing with compilers and the other 10% questioning my life choices.
                 </p>
                 <p>
-                  I created <span className="text-cyan-400 font-bold">Arcoistry</span> because, clearly, simply getting a degree wasn’t enough stress for me. 
+                  I created <span className="text-cyan-400 font-bold">Arcos</span> because, clearly, simply getting a degree wasn’t enough stress for me. 
                   It’s the unholy union of chemistry, coding, and art—a multidisciplinary mess I’ve curated.
                 </p>
                 <p className="italic text-gray-400 text-base">
@@ -228,7 +228,7 @@ export default function ArtPage() {
                </div>
             </div>
           </div>
-          <p className="mt-8 font-mono text-[9px] text-gray-600 tracking-[0.5em] uppercase">Arcoistry Art Matrix</p>
+          <p className="mt-8 font-mono text-[9px] text-gray-600 tracking-[0.5em] uppercase">Arcos Art Matrix</p>
         </div>
 
         {/* ── Large Flash Card ── */}

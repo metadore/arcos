@@ -329,7 +329,7 @@ export default function PastPage() {
             }}
           >
             Relics from another era — gadgets forged before the present moment.
-            Each entry is a page from Arcoistry's 4D Pocket history, preserved in the rain-soaked
+            Each entry is a page from Arcos's 4D Pocket history, preserved in the rain-soaked
             glow of a Tokyo night.
           </p>
 

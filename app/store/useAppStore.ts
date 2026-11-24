@@ -2,7 +2,7 @@ import { create } from 'zustand';
 
 import { projectsData, Project } from '@/data/projects';
 
-export type TimelineState = 'PAST' | 'PRESENT' | 'FUTURE';
+export type TimelineState = 'PAST' | 'PRESENT';
 
 interface AppState {
   timelineState: TimelineState;

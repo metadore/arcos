@@ -3,7 +3,7 @@ export interface Project {
   title: string;
   description: string;
   category: 'Coding' | 'Research' | 'Chemistry' | 'Art / Design' | 'Biology' | 'Nuclear Science';
-  timeline: 'PAST' | 'PRESENT' | 'FUTURE';
+  timeline: 'PAST' | 'PRESENT';
   tags: string[];
   githubUrl?: string;
   demoUrl?: string;

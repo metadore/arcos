@@ -5,7 +5,7 @@ import { useRouter, usePathname } from 'next/navigation';
 import { useAppStore, TimelineState } from '@/store/useAppStore';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const TABS: TimelineState[] = ['PAST', 'PRESENT', 'FUTURE'];
+const TABS: TimelineState[] = ['PAST', 'PRESENT'];
 
 export default function ChronoTerminal() {
   const router = useRouter();
@@ -17,7 +17,6 @@ export default function ChronoTerminal() {
   // Keep store in sync with current URL
   useEffect(() => {
     if (pathname === '/past') setTimelineState('PAST');
-    else if (pathname === '/future') setTimelineState('FUTURE');
     else setTimelineState('PRESENT');
   }, [pathname, setTimelineState]);
 
@@ -38,8 +37,6 @@ export default function ChronoTerminal() {
   const handleTabClick = (tab: TimelineState) => {
     if (tab === 'PAST') {
       router.push('/past');
-    } else if (tab === 'FUTURE') {
-      router.push('/future');
     } else {
       // PRESENT lives on the home page
       if (pathname !== '/') router.push('/');

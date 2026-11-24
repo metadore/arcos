@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation';
 const VIDEO_MAP: Record<string, string> = {
   '/':        '/bg-video.mp4',
   '/past':    '', // past page renders its own background
-  '/future':  '', // future page renders its own background
   '/art':     '', // art page renders its own background
 };
 

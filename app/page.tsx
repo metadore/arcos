@@ -21,7 +21,7 @@ export default function Home() {
       >
         <h1 className="mb-4">
           <span className="text-white">Hi, I'm </span>
-          <span className="text-gradient-doraemon">Arcoistry</span>
+          <span className="text-gradient-doraemon">Arcos</span>
         </h1>
         <h2 className="text-2xl md:text-3xl text-gray-300 font-light mb-6">
           Artist • Coder • Creator
@@ -41,18 +41,14 @@ export default function Home() {
           {/* Past */}
           <Link
             href="/past"
-            className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl font-bold text-base
-                       overflow-hidden transition-all duration-300
-                       border border-amber-400/40 text-amber-300
-                       hover:border-amber-300 hover:text-white
-                       hover:shadow-[0_0_30px_rgba(251,191,36,0.4)]"
-            style={{ background: 'rgba(251,191,36,0.08)', backdropFilter: 'blur(12px)' }}
+            className="group inline-flex items-center gap-2 px-6 py-2.5 rounded-full font-semibold text-sm
+                       bg-white/5 border border-amber-400/30 text-amber-300
+                       hover:bg-amber-400 hover:border-amber-400 hover:text-black
+                       transition-all duration-300 shadow-[0_5px_15px_rgba(0,0,0,0.3)]
+                       hover:shadow-[0_0_20px_rgba(251,191,36,0.5)]"
           >
-            <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-              style={{ background: 'linear-gradient(105deg, transparent 40%, rgba(251,191,36,0.15) 50%, transparent 60%)' }} />
-            <span className="text-xl">🕰️</span>
-            <span className="relative z-10 tracking-wide">The Archive</span>
-            <span className="relative z-10 group-hover:translate-x-1 transition-transform duration-200">→</span>
+            <span>🕰️</span>
+            <span>The Archive</span>
           </Link>
 
           {/* Art */}
@@ -63,54 +59,29 @@ export default function Home() {
               setTimeout(() => {
                 router.push('/art');
                 setTimeout(() => setTransitioning(false), 1000);
-              }, 4500); // 4.5 seconds transition
+              }, 4500);
             }}
-            className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl font-bold text-base
-                       overflow-hidden transition-all duration-300
-                       border border-rose-400/40 text-rose-300
-                       hover:border-rose-300 hover:text-white
-                       hover:shadow-[0_0_30px_rgba(251,113,133,0.4)] cursor-pointer text-left"
-            style={{ background: 'rgba(251,113,133,0.08)', backdropFilter: 'blur(12px)' }}
+            className="group inline-flex items-center gap-2 px-6 py-2.5 rounded-full font-semibold text-sm
+                       bg-white/5 border border-rose-400/30 text-rose-300
+                       hover:bg-rose-400 hover:border-rose-400 hover:text-white
+                       transition-all duration-300 shadow-[0_5px_15px_rgba(0,0,0,0.3)]
+                       hover:shadow-[0_0_20px_rgba(251,113,133,0.5)] cursor-pointer"
           >
-            <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-              style={{ background: 'linear-gradient(105deg, transparent 40%, rgba(251,113,133,0.15) 50%, transparent 60%)' }} />
-            <span className="text-xl">🎨</span>
-            <span className="relative z-10 tracking-wide">The Gallery</span>
-            <span className="relative z-10 group-hover:translate-x-1 transition-transform duration-200">→</span>
+            <span>🎨</span>
+            <span>The Gallery</span>
           </button>
 
           {/* Contact */}
           <Link
             href="/contact"
-            className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl font-bold text-base
-                       overflow-hidden transition-all duration-300
-                       border border-purple-400/40 text-purple-300
-                       hover:border-purple-300 hover:text-white
-                       hover:shadow-[0_0_30px_rgba(168,85,247,0.4)]"
-            style={{ background: 'rgba(168,85,247,0.08)', backdropFilter: 'blur(12px)' }}
+            className="group inline-flex items-center gap-2 px-6 py-2.5 rounded-full font-semibold text-sm
+                       bg-white/5 border border-purple-400/30 text-purple-300
+                       hover:bg-purple-500 hover:border-purple-500 hover:text-white
+                       transition-all duration-300 shadow-[0_5px_15px_rgba(0,0,0,0.3)]
+                       hover:shadow-[0_0_20px_rgba(168,85,247,0.5)]"
           >
-            <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-              style={{ background: 'linear-gradient(105deg, transparent 40%, rgba(168,85,247,0.15) 50%, transparent 60%)' }} />
-            <span className="text-xl">🛸</span>
-            <span className="relative z-10 tracking-wide">The Hub</span>
-            <span className="relative z-10 group-hover:translate-x-1 transition-transform duration-200">→</span>
-          </Link>
-
-          {/* Future */}
-          <Link
-            href="/future"
-            className="group relative inline-flex items-center gap-3 px-8 py-4 rounded-2xl font-bold text-base
-                       overflow-hidden transition-all duration-300
-                       border border-cyan-400/40 text-cyan-300
-                       hover:border-cyan-300 hover:text-white
-                       hover:shadow-[0_0_30px_rgba(34,211,238,0.4)]"
-            style={{ background: 'rgba(34,211,238,0.08)', backdropFilter: 'blur(12px)' }}
-          >
-            <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-              style={{ background: 'linear-gradient(105deg, transparent 40%, rgba(34,211,238,0.15) 50%, transparent 60%)' }} />
-            <span className="text-xl">🚀</span>
-            <span className="relative z-10 tracking-wide">The Horizon</span>
-            <span className="relative z-10 group-hover:translate-x-1 transition-transform duration-200">→</span>
+            <span>🛸</span>
+            <span>The Hub</span>
           </Link>
         </motion.div>
       </motion.div>
