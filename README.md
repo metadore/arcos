@@ -42,7 +42,7 @@
 
 
 
-<a href="https://arcoistry-tknh.vercel.app">
+<a href="https://metadore.vercel.app">
 
 <img src="https://img.shields.io/badge/🌀_ENTER_THE_4D_POCKET-020617?style=for-the-badge&labelColor=020617&color=38BDF8" />
 
