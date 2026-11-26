@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 270" width="220" height="270" role="img" aria-label="Arco, the cloud-robot mascot">
+<defs>
+<linearGradient id="bd" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#BAE6FD"/><stop offset="1" stop-color="#38BDF8"/></linearGradient>
+<radialGradient id="pt"><stop offset="0" stop-color="#6366F1"/><stop offset="1" stop-color="#1E1B4B"/></radialGradient>
+<g id="head"><circle cx="110" cy="100" r="62"/><circle cx="52" cy="108" r="26"/><circle cx="168" cy="108" r="26"/><circle cx="78" cy="56" r="28"/><circle cx="142" cy="56" r="28"/></g>
+<g id="belly"><ellipse cx="110" cy="206" rx="54" ry="44"/><circle cx="52" cy="198" r="17"/><circle cx="168" cy="198" r="17"/></g>
+<path id="st" d="M0-10L3-3 10-3 4.5 2 6.5 9 0 5-6.5 9-4.5 2-10-3-3-3Z"/>
+</defs>
+<ellipse cx="110" cy="262" rx="70" ry="6" fill="#0C4A6E" opacity=".18"/>
+<g>
+<animateTransform attributeName="transform" type="translate" values="0 0;0 -5;0 0" keyTimes="0;.5;1" dur="3s" calcMode="spline" keySplines=".4 0 .6 1;.4 0 .6 1" repeatCount="indefinite"/>
+<ellipse cx="80" cy="250" rx="24" ry="12" fill="#fff" stroke="#0369A1" stroke-width="4"/>
+<ellipse cx="140" cy="250" rx="24" ry="12" fill="#fff" stroke="#0369A1" stroke-width="4"/>
+<use href="#belly" fill="#0369A1" stroke="#0369A1" stroke-width="9"/>
+<use href="#belly" fill="url(#bd)"/>
+<circle cx="110" cy="208" r="31" fill="url(#pt)" stroke="#0369A1" stroke-width="4"/>
+<circle cx="110" cy="208" r="23" fill="none" stroke="#7DD3FC" stroke-width="2.5" stroke-dasharray="4 6" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" from="0 110 208" to="360 110 208" dur="6s" repeatCount="indefinite"/></circle>
+<circle cx="110" cy="208" r="11" fill="none" stroke="#A5B4FC" stroke-width="2" stroke-dasharray="3 5" stroke-linecap="round"><animateTransform attributeName="transform" type="rotate" from="360 110 208" to="0 110 208" dur="4s" repeatCount="indefinite"/></circle>
+<g fill="#fff"><circle cx="98" cy="196" r="1.4"/><circle cx="124" cy="214" r="1.4"/><circle cx="104" cy="222" r="1.1"/><circle cx="121" cy="198" r="1.1"/></g>
+<line x1="110" y1="42" x2="110" y2="20" stroke="#0369A1" stroke-width="4" stroke-linecap="round"/>
+<circle cx="110" cy="14" r="8" fill="#FACC15" stroke="#CA8A04" stroke-width="3"><animate attributeName="r" values="8;10;8" dur="1.6s" repeatCount="indefinite"/></circle>
+<use href="#head" fill="#0369A1" stroke="#0369A1" stroke-width="9"/>
+<use href="#head" fill="url(#bd)"/>
+<ellipse cx="110" cy="112" rx="50" ry="40" fill="#fff"/>
+<g stroke="#0C4A6E" stroke-width="3">
+<ellipse cx="92" cy="96" rx="12" ry="15" fill="#fff"><animate attributeName="ry" values="15;15;15;1.5;15" keyTimes="0;.6;.9;.95;1" dur="4s" repeatCount="indefinite"/></ellipse>
+<ellipse cx="128" cy="96" rx="12" ry="15" fill="#fff"><animate attributeName="ry" values="15;15;15;1.5;15" keyTimes="0;.6;.9;.95;1" dur="4s" repeatCount="indefinite"/></ellipse>
+</g>
+<g fill="#0C4A6E"><ellipse cx="94" cy="98" rx="6" ry="8"><animate attributeName="ry" values="8;8;8;1;8" keyTimes="0;.6;.9;.95;1" dur="4s" repeatCount="indefinite"/></ellipse><ellipse cx="126" cy="98" rx="6" ry="8"><animate attributeName="ry" values="8;8;8;1;8" keyTimes="0;.6;.9;.95;1" dur="4s" repeatCount="indefinite"/></ellipse></g>
+<g fill="#fff"><circle cx="96" cy="94" r="2.4"/><circle cx="124" cy="94" r="2.4"/></g>
+<circle cx="110" cy="115" r="6.5" fill="#EF4444" stroke="#991B1B" stroke-width="2"/><circle cx="108" cy="113" r="2" fill="#fff" opacity=".8"/>
+<path d="M90 128Q110 150 130 128Z" fill="#7F1D1D" stroke="#0C4A6E" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M101 137Q110 133 119 137Q110 144 101 137Z" fill="#FB7185"/>
+<circle cx="72" cy="122" r="8" fill="#FB7185" opacity=".45"/><circle cx="148" cy="122" r="8" fill="#FB7185" opacity=".45"/>
+</g>
+<use href="#st" fill="#FDE047" transform="translate(26 70)"><animate attributeName="opacity" values="0;1;0" dur="2.4s" repeatCount="indefinite"/></use>
+<use href="#st" fill="#FDE047" transform="translate(196 44) scale(.8)"><animate attributeName="opacity" values="1;0;1" dur="2.8s" repeatCount="indefinite"/></use>
+<use href="#st" fill="#7DD3FC" transform="translate(198 232) scale(.9)"><animate attributeName="opacity" values="0;1;0" dur="3.2s" repeatCount="indefinite"/></use>
+</svg>

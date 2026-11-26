@@ -1,16 +1,14 @@
 <div align="center">
 
-<img src="sky-banner.svg" width="100%" alt="Arcos — The 4D Pocket" />
-
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/ChatGPT%20Image%20Sep%2030%2C%202026%2C%2003_31_05%20PM.png" width="100%" alt="Arcos — The 4D Pocket" />
-
-<br><br>
-
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/doraemon.svg" width="170" alt="Doraemon" />
+<img src="assets/sky-banner.svg" width="100%" alt="Arcos — The 4D Pocket" />
 
 <br>
 
-<img src="https://readme-typing-svg.herokuapp.com/?font=Fredoka&weight=600&size=22&duration=3200&pause=900&color=0EA5E9&center=true&vCenter=true&width=700&lines=Reach+into+the+4D+pocket...;Art+%C2%B7+Code+%C2%B7+Research+%C2%B7+Experiments;Take-copter+ready.+Anywhere+door+open.;Same+creator.+Different+timelines." alt="Typing introduction" />
+<img src="assets/arco-mascot.svg" width="190" alt="Arco, the pocket guardian" />
+
+<br>
+
+<img src="https://readme-typing-svg.herokuapp.com/?font=Fredoka&weight=600&size=22&duration=3200&pause=900&color=0EA5E9&center=true&vCenter=true&width=760&lines=Ding-ding!+Reach+into+the+4D+pocket...;Today's+gadget%3A+the+Anywhere+Door.;Art+%C2%B7+Code+%C2%B7+Research+%C2%B7+Experiments;Take-copter+ready.+Dorayaki+fueled.;Same+creator.+Different+timelines." alt="Typing introduction" />
 
 <br>
 
@@ -30,25 +28,33 @@
 
 </div>
 
-<img src="cloud-divider.svg" width="100%" alt="" />
+<img src="assets/cloud-divider.svg" width="100%" alt="" />
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/4d-pocket.svg" width="320" alt="4D Pocket" />
+<img src="assets/4d-pocket.svg" width="340" alt="The 4D Pocket" />
 
 <br><br>
 
 ## `A PORTFOLIO THAT DOESN'T BEHAVE LIKE A PORTFOLIO.`
 
-**OPEN · EXPLORE · DISCOVER**
+**REACH IN · RUMMAGE AROUND · PULL OUT SOMETHING IMPOSSIBLE**
+
+<br>
+
+![Dorayaki level](https://img.shields.io/badge/DORAYAKI_LEVEL-100%25-F59E0B?style=flat-square&labelColor=92400E)
+![Imagination](https://img.shields.io/badge/IMAGINATION-OVERFLOWING-38BDF8?style=flat-square&labelColor=0369A1)
+![Stability](https://img.shields.io/badge/STABILITY-QUESTIONABLE-F87171?style=flat-square&labelColor=991B1B)
 
 </div>
 
-<img src="cloud-divider.svg" width="100%" alt="" />
+<img src="assets/cloud-divider.svg" width="100%" alt="" />
 
 # 🧳 THE POCKET
 
 Arcos is a personal digital space where **art, code, research, experiments and unfinished ideas** coexist.
+
+It works like a certain famous pocket: you reach in expecting one thing, and you pull out something you didn't know you needed.
 
 It's part portfolio.
 
@@ -61,6 +67,10 @@ Part something that probably shouldn't have been built.
 <br>
 
 <div align="center">
+
+> 💬 *"Don't worry. There's probably a gadget for that."*
+
+<br>
 
 ### `THERE IS NO SINGLE TIMELINE HERE.`
 
@@ -84,17 +94,19 @@ Ideas that haven't become real yet.
 
 </div>
 
-<img src="cloud-divider.svg" width="100%" alt="" />
+<img src="assets/cloud-divider.svg" width="100%" alt="" />
 
 # 🚪 ANYWHERE DOOR
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/anywhere-door.svg" width="300" alt="Anywhere Door" />
+<img src="assets/anywhere-door.svg" width="260" alt="Anywhere Door" />
 
 <br><br>
 
 ### `ONE POCKET. THREE TIMELINES.`
+
+*Open the door. Pick a time. Step through.*
 
 </div>
 
@@ -154,13 +166,13 @@ Impossible concepts
 
 </div>
 
-<img src="cloud-divider.svg" width="100%" alt="" />
+<img src="assets/cloud-divider.svg" width="100%" alt="" />
 
 # 🕰️ 01 — THE ARCHIVE
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/time-machine.svg" width="280" alt="Time Machine" />
+<img src="assets/time-machine.svg" width="230" alt="Time Machine" />
 
 </div>
 
@@ -184,25 +196,29 @@ The Archive is the collection of things that have already escaped the pocket.
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/time-furoshiki.svg" width="180" alt="Time Furoshiki" />
+<img src="assets/time-furoshiki.svg" width="170" alt="Time Furoshiki" />
 
 <br><br>
 
 > **EVERY FINISHED PROJECT IS A FOSSIL FROM AN EARLIER VERSION OF THE CREATOR.**
+>
+> *Wrapped in the Time Furoshiki. Good as new. Or at least newer.*
 
 </div>
 
-<img src="cloud-divider.svg" width="100%" alt="" />
+<img src="assets/cloud-divider.svg" width="100%" alt="" />
 
 # 📍 02 — THE HUB
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/take-copter.svg" width="230" alt="Take-Copter" />
+<img src="assets/take-copter.svg" width="220" alt="Take-Copter" />
 
 <br><br>
 
 ### `CURRENTLY UNDER CONSTRUCTION.`
+
+*Propeller on. Head in the clouds. Feet optional.*
 
 </div>
 
@@ -236,17 +252,19 @@ Projects become experiments again.
 
 </div>
 
-<img src="cloud-divider.svg" width="100%" alt="" />
+<img src="assets/cloud-divider.svg" width="100%" alt="" />
 
 # 🛸 03 — THE HORIZON
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/what-if-machine.svg" width="300" alt="What-If Machine" />
+<img src="assets/what-if-machine.svg" width="240" alt="What-If Machine" />
 
 <br><br>
 
 ### `IDEAS THAT HAVEN'T BECOME REALITY YET.`
+
+*Ask the machine: "what if?" Then build the answer.*
 
 </div>
 
@@ -270,7 +288,7 @@ Some can wait.
 
 <br>
 
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/anywhere-rocket.svg" width="240" alt="Anywhere Rocket" />
+<img src="assets/anywhere-rocket.svg" width="220" alt="Anywhere Rocket" />
 
 <br>
 
@@ -278,15 +296,19 @@ Some can wait.
 
 </div>
 
-<img src="cloud-divider.svg" width="100%" alt="" />
+<img src="assets/cloud-divider.svg" width="100%" alt="" />
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/dorayaki.svg" width="150" alt="Dorayaki" />
+<img src="assets/dorayaki.svg" width="150" alt="Dorayaki" />
+
+<br>
+
+`FUEL STATION · DORAYAKI REFILLED`
 
 </div>
 
-<img src="cloud-divider.svg" width="100%" alt="" />
+<img src="assets/cloud-divider.svg" width="100%" alt="" />
 
 # 🧰 SECRET GADGETS
 
@@ -300,7 +322,7 @@ Some can wait.
 <tr>
 <td align="center" width="25%">
 
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/anywhere-door.svg" width="110" />
+<img src="assets/anywhere-door.svg" width="110" alt="Anywhere Door" />
 
 **ANYWHERE DOOR**
 
@@ -309,7 +331,7 @@ Some can wait.
 </td>
 <td align="center" width="25%">
 
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/take-copter.svg" width="110" />
+<img src="assets/take-copter.svg" width="110" alt="Take-Copter" />
 
 **TAKE-COPTER**
 
@@ -318,7 +340,7 @@ Some can wait.
 </td>
 <td align="center" width="25%">
 
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/4d-pocket.svg" width="110" />
+<img src="assets/4d-pocket.svg" width="130" alt="4D Pocket" />
 
 **4D POCKET**
 
@@ -327,7 +349,7 @@ Some can wait.
 </td>
 <td align="center" width="25%">
 
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/time-machine.svg" width="110" />
+<img src="assets/time-machine.svg" width="110" alt="Time Machine" />
 
 **TIME MACHINE**
 
@@ -339,7 +361,7 @@ Some can wait.
 <tr>
 <td align="center">
 
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/what-if-machine.svg" width="110" />
+<img src="assets/what-if-machine.svg" width="110" alt="What-If Machine" />
 
 **WHAT-IF MACHINE**
 
@@ -348,7 +370,7 @@ Some can wait.
 </td>
 <td align="center">
 
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/time-furoshiki.svg" width="110" />
+<img src="assets/time-furoshiki.svg" width="110" alt="Time Furoshiki" />
 
 **TIME FUROSHIKI**
 
@@ -357,7 +379,7 @@ Some can wait.
 </td>
 <td align="center">
 
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/small-light.svg" width="110" />
+<img src="assets/small-light.svg" width="110" alt="Small Light" />
 
 **SMALL LIGHT**
 
@@ -366,7 +388,7 @@ Some can wait.
 </td>
 <td align="center">
 
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/anywhere-rocket.svg" width="110" />
+<img src="assets/anywhere-rocket.svg" width="110" alt="Anywhere Rocket" />
 
 **ANYWHERE ROCKET**
 
@@ -378,7 +400,27 @@ Some can wait.
 
 </div>
 
-<img src="cloud-divider.svg" width="100%" alt="" />
+<br>
+
+<details>
+<summary>📖 <b>GADGET MANUAL</b> (how each one is used around here)</summary>
+
+<br>
+
+| Gadget | What it does in Arcos |
+|---|---|
+| 🚪 **Anywhere Door** | Jump between Past, Present and Future without a map. |
+| 🚁 **Take-Copter** | Quick lift for projects stuck on the ground. |
+| 🧳 **4D Pocket** | Where every idea, sketch and half-built thing is stored. |
+| ⏳ **Time Machine** | Dig up old projects and see what past-me was thinking. |
+| 🔮 **What-If Machine** | Generates the "what if" that starts every experiment. |
+| 🧣 **Time Furoshiki** | Rewrap an old project until it's good as new. |
+| 🔦 **Small Light** | Shrinks a giant problem down to a manageable size. |
+| 🚀 **Anywhere Rocket** | Ships the idea. Destination: whoever needs it. |
+
+</details>
+
+<img src="assets/cloud-divider.svg" width="100%" alt="" />
 
 # 📦 WHAT'S INSIDE?
 
@@ -434,13 +476,13 @@ Creative web experiences, applications, interfaces and experiments.
 
 </details>
 
-<img src="cloud-divider.svg" width="100%" alt="" />
+<img src="assets/cloud-divider.svg" width="100%" alt="" />
 
 # 🧪 EXPERIMENT LAB
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/small-light.svg" width="220" alt="Small Light" />
+<img src="assets/small-light.svg" width="200" alt="Small Light" />
 
 <br><br>
 
@@ -468,7 +510,7 @@ Creative web experiences, applications, interfaces and experiments.
 
 </div>
 
-<img src="cloud-divider.svg" width="100%" alt="" />
+<img src="assets/cloud-divider.svg" width="100%" alt="" />
 
 # 🧬 DIMENSIONAL SIGNATURE
 
@@ -486,13 +528,13 @@ Creative web experiences, applications, interfaces and experiments.
 
 </div>
 
-<img src="cloud-divider.svg" width="100%" alt="" />
+<img src="assets/cloud-divider.svg" width="100%" alt="" />
 
 # 🌀 THE POCKET RULE
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/doraemon.svg" width="150" alt="Doraemon" />
+<img src="assets/arco-mascot.svg" width="150" alt="Arco" />
 
 <br><br>
 
@@ -516,13 +558,13 @@ Creative web experiences, applications, interfaces and experiments.
 
 </div>
 
-<img src="cloud-divider.svg" width="100%" alt="" />
+<img src="assets/cloud-divider.svg" width="100%" alt="" />
 
 # 🔔 THE CREATOR
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/doraemon-bell.svg" width="90" alt="Doraemon Bell" />
+<img src="assets/bell.svg" width="110" alt="Golden bell" />
 
 <br><br>
 
@@ -544,17 +586,17 @@ I build things somewhere between:
 
 <br>
 
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/dorayaki.svg" width="130" alt="Dorayaki" />
+<img src="assets/dorayaki.svg" width="120" alt="Dorayaki" />
 
 </div>
 
-<img src="cloud-divider.svg" width="100%" alt="" />
+<img src="assets/cloud-divider.svg" width="100%" alt="" />
 
 # 📡 TRANSMISSION
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/anywhere-rocket.svg" width="220" alt="Anywhere Rocket" />
+<img src="assets/anywhere-rocket.svg" width="200" alt="Anywhere Rocket" />
 
 <br><br>
 
@@ -570,7 +612,7 @@ I build things somewhere between:
 
 <br><br>
 
-<img src="https://raw.githubusercontent.com/metadore/arcos/master/doraemon.svg" width="160" alt="Doraemon" />
+<img src="assets/arco-mascot.svg" width="150" alt="Arco" />
 
 <br><br>
 
@@ -582,6 +624,10 @@ I build things somewhere between:
 
 *Made somewhere between yesterday and tomorrow.*
 
+<br>
+
+<sub>Inspired by the world of Doraemon (© Fujiko-Pro). This is an unofficial fan tribute. All artwork here is original.</sub>
+
 </div>
 
-<img src="sky-banner.svg" width="100%" alt="" />
+<img src="assets/sky-banner.svg" width="100%" alt="" />

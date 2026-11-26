@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Golden bell">
+<defs>
+<radialGradient id="g" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#FEF08A"/><stop offset=".55" stop-color="#FACC15"/><stop offset="1" stop-color="#CA8A04"/></radialGradient>
+</defs>
+<ellipse cx="100" cy="184" rx="44" ry="6" fill="#0C4A6E" opacity=".15"/>
+<g>
+<animateTransform attributeName="transform" type="rotate" values="-9 100 40;9 100 40;-9 100 40" keyTimes="0;.5;1" dur="1.4s" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1" repeatCount="indefinite"/>
+<circle cx="100" cy="48" r="9" fill="none" stroke="#CA8A04" stroke-width="5"/>
+<path d="M44 82Q100 108 156 82L158 100Q100 126 42 100Z" fill="#EF4444" stroke="#991B1B" stroke-width="4" stroke-linejoin="round"/>
+<circle cx="100" cy="112" r="56" fill="url(#g)" stroke="#A16207" stroke-width="5"/>
+<path d="M46 118Q100 134 154 118" fill="none" stroke="#A16207" stroke-width="4" stroke-linecap="round"/>
+<circle cx="100" cy="136" r="9" fill="#78350F"/>
+<line x1="100" y1="143" x2="100" y2="164" stroke="#78350F" stroke-width="7" stroke-linecap="round"/>
+<ellipse cx="74" cy="92" rx="10" ry="20" fill="#fff" opacity=".45" transform="rotate(25 74 92)"/>
+</g>
+<g fill="none" stroke="#38BDF8" stroke-width="4" stroke-linecap="round">
+<path d="M26 100Q16 112 26 124"><animate attributeName="opacity" values="0;1;0" dur="1.4s" repeatCount="indefinite"/></path>
+<path d="M174 100Q184 112 174 124"><animate attributeName="opacity" values="0;1;0" dur="1.4s" repeatCount="indefinite"/></path>
+</g>
+</svg>
