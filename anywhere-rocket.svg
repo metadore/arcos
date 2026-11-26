@@ -1,13 +1,360 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Rocket">
-<defs><linearGradient id="rb" x1="0" x2="1"><stop offset="0" stop-color="#fff"/><stop offset=".6" stop-color="#E0F2FE"/><stop offset="1" stop-color="#7DD3FC"/></linearGradient><path id="st" d="M0-10L3-3 10-3 4.5 2 6.5 9 0 5-6.5 9-4.5 2-10-3-3-3Z"/></defs>
-<g fill="#FDE047"><use href="#st" transform="translate(30 40) scale(.7)"><animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/></use><use href="#st" transform="translate(172 150) scale(.8)"><animate attributeName="opacity" values="1;0;1" dur="2.6s" repeatCount="indefinite"/></use><use href="#st" transform="translate(40 150) scale(.6)"><animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/></use></g>
-<g fill="none" stroke="#BAE6FD" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 10"><path d="M30 190Q60 170 80 150"/></g>
-<g transform="rotate(35 100 100)"><animateTransform additive="sum" attributeName="transform" type="translate" values="0 0;0 -5;0 0" dur="1.4s" repeatCount="indefinite"/>
-<g transform="translate(100 150)"><path d="M-12 0Q0 56 12 0Z" fill="#FDE047" stroke="#F97316" stroke-width="3" stroke-linejoin="round"><animateTransform attributeName="transform" type="scale" values="1 .7;1 1.25;1 .7" dur=".3s" repeatCount="indefinite"/></path></g>
-<path d="M72 120L50 152L78 142Z" fill="#EF4444" stroke="#991B1B" stroke-width="4" stroke-linejoin="round"/>
-<path d="M128 120L150 152L122 142Z" fill="#EF4444" stroke="#991B1B" stroke-width="4" stroke-linejoin="round"/>
-<path d="M100 20Q136 56 130 140H70Q64 56 100 20Z" fill="url(#rb)" stroke="#0369A1" stroke-width="4" stroke-linejoin="round"/>
-<path d="M100 20Q124 40 128 64H72Q76 40 100 20Z" fill="#EF4444" stroke="#991B1B" stroke-width="4" stroke-linejoin="round"/>
-<circle cx="100" cy="96" r="17" fill="#0EA5E9" stroke="#0369A1" stroke-width="4"/><circle cx="94" cy="90" r="5" fill="#fff" opacity=".7"/>
-<rect x="70" y="124" width="60" height="9" fill="#0EA5E9" stroke="#0369A1" stroke-width="3"/></g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 800" width="100%" height="100%" role="img" aria-labelledby="t d">
+  <title id="t">Anywhere Rocket</title>
+  <desc id="d">A silver rocket with a red nose cone and a pink door in its hull flies toward a spinning warp portal through a starfield.</desc>
+
+  <defs>
+    <radialGradient id="spaceBg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#1c0038"/>
+      <stop offset="45%" stop-color="#0a0018"/>
+      <stop offset="100%" stop-color="#020008"/>
+    </radialGradient>
+
+    <radialGradient id="portalTunnel" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="20%" stop-color="#ff00a0"/>
+      <stop offset="55%" stop-color="#00f0ff"/>
+      <stop offset="85%" stop-color="#7000ff"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="rocketRed" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff6685"/>
+      <stop offset="35%" stop-color="#ff0033"/>
+      <stop offset="75%" stop-color="#cc0029"/>
+      <stop offset="100%" stop-color="#660014"/>
+    </linearGradient>
+    <linearGradient id="rocketRedDark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c4002a"/>
+      <stop offset="100%" stop-color="#4d000f"/>
+    </linearGradient>
+
+    <!-- Hull: vertical gradient so it reads as a cylinder, not a flat diagonal -->
+    <linearGradient id="rocketHull" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="18%" stop-color="#eceefc"/>
+      <stop offset="55%" stop-color="#a9abc9"/>
+      <stop offset="100%" stop-color="#4a4a66"/>
+    </linearGradient>
+    <linearGradient id="goldAccent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff5cc"/>
+      <stop offset="40%" stop-color="#ffd700"/>
+      <stop offset="80%" stop-color="#ccab00"/>
+      <stop offset="100%" stop-color="#665500"/>
+    </linearGradient>
+    <linearGradient id="doorPink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff66b3"/>
+      <stop offset="50%" stop-color="#ff007f"/>
+      <stop offset="100%" stop-color="#b30059"/>
+    </linearGradient>
+    <linearGradient id="plasmaFlame" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="20%" stop-color="#00ffff"/>
+      <stop offset="50%" stop-color="#ff00aa"/>
+      <stop offset="85%" stop-color="#ff5500"/>
+      <stop offset="100%" stop-color="#ff0000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glassTint" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e6ffff" stop-opacity=".9"/>
+      <stop offset="50%" stop-color="#80ffff" stop-opacity=".6"/>
+      <stop offset="100%" stop-color="#008080" stop-opacity=".4"/>
+    </linearGradient>
+    <linearGradient id="streak" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- What's behind the hatch: a small window onto the portal -->
+    <radialGradient id="hatchGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#00f0ff"/>
+      <stop offset="75%" stop-color="#b000ff"/>
+      <stop offset="100%" stop-color="#33001a"/>
+    </radialGradient>
+
+    <filter id="intenseGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="b1"/>
+      <feGaussianBlur stdDeviation="22" result="b2"/>
+      <feMerge><feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="blur4" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4"/></filter>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="-8" dy="16" stdDeviation="14" flood-color="#000" flood-opacity=".85"/>
+    </filter>
+
+    <clipPath id="hullClip">
+      <path d="M240,360 C320,330 460,330 550,345 C620,355 660,380 690,400 C660,420 620,445 550,455 C460,470 320,470 240,440 Z"/>
+    </clipPath>
+    <clipPath id="hatchClip"><rect x="8" y="8" width="114" height="114" rx="8"/></clipPath>
+  </defs>
+
+  <style>
+    /* SVG children pivot on their own box unless told otherwise */
+    .pv { transform-box: fill-box; transform-origin: center; }
+
+    /* ---- Rocket drifts and banks ---- */
+    .rocket-ship { animation: rocketFlight 3.5s ease-in-out infinite alternate; transform-origin: 450px 400px; }
+    @keyframes rocketFlight {
+      0%   { transform: translate(-6px, 14px)  rotate(-1deg); }
+      100% { transform: translate(8px, -16px)  rotate(2deg); }
+    }
+    /* shadow shrinks as the rocket rises, grows as it sinks */
+    .ground-shadow { animation: shadow 3.5s ease-in-out infinite alternate; }
+    @keyframes shadow { 0% { transform: scale(1.04); opacity: .8; } 100% { transform: scale(.88); opacity: .55; } }
+
+    /* ---- Engine: flame stretches rearwards from the nozzle (pinned at x=210) ---- */
+    .thrust-flame { animation: flamePulse .14s ease-in-out infinite alternate; transform-origin: 215px 400px; }
+    .thrust-core  { animation: flamePulse .1s ease-in-out infinite alternate-reverse; transform-origin: 215px 400px; }
+    @keyframes flamePulse {
+      0%   { transform: scale(.85, .94); opacity: .85; }
+      100% { transform: scale(1.12, 1.06); opacity: 1; }
+    }
+    .engine-halo { animation: halo .6s ease-in-out infinite alternate; }
+    @keyframes halo { 0% { opacity: .5; } 100% { opacity: .95; } }
+
+    .trail-particle { animation: particleFly 2.5s linear infinite; }
+    .d1 { animation-delay: .6s; } .d2 { animation-delay: 1.2s; } .d3 { animation-delay: 1.8s; }
+    @keyframes particleFly {
+      0%   { transform: translate(0,0) scale(1);        opacity: .9; }
+      100% { transform: translate(-260px,40px) scale(.2); opacity: 0; }
+    }
+
+    /* ---- Portal ---- */
+    .spin-cw  { animation: spinCW 20s linear infinite; }
+    .spin-ccw { animation: spinCCW 14s linear infinite; }
+    .spin-fast{ animation: spinCW 7s linear infinite; }
+    @keyframes spinCW  { to { transform: rotate(360deg); } }
+    @keyframes spinCCW { to { transform: rotate(-360deg); } }
+    .vortex { animation: vortex 3.2s ease-in-out infinite alternate; }
+    @keyframes vortex { 0% { transform: scale(.94); opacity: .8; } 100% { transform: scale(1.06); opacity: 1; } }
+    .constellation { stroke-dasharray: 1; animation: draw 6s ease-in-out infinite; }
+    @keyframes draw { 0% { stroke-dashoffset: 1; } 45%, 80% { stroke-dashoffset: 0; } 100% { stroke-dashoffset: -1; } }
+
+    /* ---- Hatch: swings on a hinge at its left edge, revealing the portal behind it ---- */
+    .door-hatch { transform-box: fill-box; transform-origin: left center; animation: hatch 6s cubic-bezier(.6,0,.35,1) infinite alternate; }
+    @keyframes hatch {
+      0%, 20%   { transform: scaleX(1)   skewY(0deg); }
+      80%, 100% { transform: scaleX(.22) skewY(-9deg); }
+    }
+    .hatch-glow { animation: hatchGlow 6s ease-in-out infinite alternate; }
+    @keyframes hatchGlow { 0%, 20% { opacity: .25; } 80%, 100% { opacity: 1; } }
+    .keypad { animation: blink 1s steps(2) infinite; }
+    @keyframes blink { 50% { opacity: .2; } }
+
+    /* ---- Ambient ---- */
+    .s1 { animation: twinkle 1.4s ease-in-out infinite alternate; }
+    .s2 { animation: twinkle 2.2s ease-in-out infinite alternate .6s; }
+    .s3 { animation: twinkle 2.8s ease-in-out infinite alternate 1.1s; }
+    @keyframes twinkle { 0% { opacity: .2; transform: scale(.6); } 100% { opacity: 1; transform: scale(1.4); } }
+
+    /* speed streaks sell the forward motion */
+    .streak { animation: streak 1.6s linear infinite; }
+    @keyframes streak { 0% { transform: translateX(0); opacity: 0; } 15% { opacity: .8; } 100% { transform: translateX(-980px); opacity: 0; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+      .streak { opacity: 0; }
+      .door-hatch { transform: scaleX(.3) skewY(-8deg); }
+    }
+  </style>
+
+  <!-- ================= SPACE ================= -->
+  <rect width="900" height="800" fill="url(#spaceBg)"/>
+
+  <g opacity=".7">
+    <circle class="pv s1" cx="100" cy="120" r="1.5" fill="#fff"/>
+    <circle class="pv s2" cx="820" cy="140" r="2"   fill="#00ffff"/>
+    <circle class="pv s3" cx="140" cy="680" r="1.2" fill="#ff00a0"/>
+    <circle class="pv s1" cx="850" cy="650" r="1.8" fill="#fff"/>
+    <circle class="pv s2" cx="280" cy="180" r="1.4" fill="#ffd700"/>
+    <circle class="pv s3" cx="750" cy="710" r="1.6" fill="#00f0ff"/>
+    <circle class="pv s1" cx="420" cy="90"  r="1.2" fill="#fff"/>
+    <circle class="pv s2" cx="60"  cy="400" r="1.3" fill="#fff"/>
+    <circle class="pv s3" cx="520" cy="740" r="1.4" fill="#00f0ff"/>
+    <circle class="pv s1" cx="880" cy="400" r="1.1" fill="#ffb3da"/>
+    <circle class="pv s2" cx="340" cy="60"  r="1"   fill="#fff"/>
+    <circle class="pv s3" cx="200" cy="560" r="1.2" fill="#ffd700"/>
+    <circle class="pv s1" cx="680" cy="100" r="1.3" fill="#fff"/>
+    <circle class="pv s2" cx="30"  cy="250" r="1"   fill="#00ffff"/>
+  </g>
+
+  <!-- speed streaks (start off-screen right, fly left) -->
+  <g>
+    <rect class="streak" style="animation-delay:0s"    x="900" y="110" width="150" height="2"   fill="url(#streak)"/>
+    <rect class="streak" style="animation-delay:-.5s"  x="900" y="210" width="90"  height="1.5" fill="url(#streak)"/>
+    <rect class="streak" style="animation-delay:-1s"   x="900" y="560" width="170" height="2"   fill="url(#streak)"/>
+    <rect class="streak" style="animation-delay:-.2s"  x="900" y="640" width="110" height="1.5" fill="url(#streak)"/>
+    <rect class="streak" style="animation-delay:-1.3s" x="900" y="70"  width="120" height="1.5" fill="url(#streak)"/>
+    <rect class="streak" style="animation-delay:-.8s"  x="900" y="690" width="80"  height="1.5" fill="url(#streak)"/>
+  </g>
+
+  <!-- ================= WARP PORTAL ================= -->
+  <g id="warp-portal" transform="translate(60,-30)">
+    <ellipse class="pv vortex" cx="650" cy="320" rx="190" ry="220" fill="url(#portalTunnel)" filter="url(#intenseGlow)"/>
+
+    <!-- inward spiral arms -->
+    <g class="pv spin-fast" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".45">
+      <path d="M650 320 m0 -20 a20 22 0 1 1 -20 22 a45 50 0 1 1 48 -52 a75 84 0 1 1 -86 96"/>
+      <path d="M650 320 m0 20 a20 22 0 1 1 20 -22 a45 50 0 1 1 -48 52 a75 84 0 1 1 86 -96"/>
+    </g>
+
+    <g class="pv spin-cw" stroke="#00ffff" stroke-width="1.5" fill="none" opacity=".75">
+      <ellipse cx="650" cy="320" rx="160" ry="180" stroke-dasharray="15 10 35 15"/>
+      <ellipse cx="650" cy="320" rx="120" ry="135" stroke-dasharray="8 8"/>
+    </g>
+    <g class="pv spin-ccw" stroke="#ff00a0" stroke-width="2" fill="none" opacity=".65" filter="url(#softGlow)">
+      <ellipse cx="650" cy="320" rx="140" ry="160" stroke-dasharray="25 15 10 15"/>
+      <ellipse cx="650" cy="320" rx="90"  ry="100" stroke-dasharray="6 12"/>
+    </g>
+
+    <!-- bright core -->
+    <ellipse cx="650" cy="320" rx="30" ry="34" fill="#fff" opacity=".85" filter="url(#intenseGlow)"/>
+
+    <!-- constellation redraws itself -->
+    <g stroke="#fff" stroke-width="1.2" fill="none" opacity=".6">
+      <path class="constellation" pathLength="1" d="M610 250 L640 280 L680 260 L710 310 L660 360 L620 340 Z"/>
+      <circle class="pv s1" cx="610" cy="250" r="3"   fill="#fff"/>
+      <circle class="pv s2" cx="640" cy="280" r="2.5" fill="#ffd700"/>
+      <circle class="pv s3" cx="680" cy="260" r="3"   fill="#00ffff"/>
+      <circle class="pv s1" cx="710" cy="310" r="3.5" fill="#ff00a0"/>
+      <circle class="pv s2" cx="660" cy="360" r="2.5" fill="#fff"/>
+      <circle class="pv s3" cx="620" cy="340" r="2.5" fill="#ffd700"/>
+    </g>
+  </g>
+
+  <!-- ground shadow -->
+  <ellipse class="pv ground-shadow" cx="450" cy="725" rx="360" ry="35" fill="#000" opacity=".75" filter="url(#intenseGlow)"/>
+
+  <!-- ================= ROCKET ================= -->
+  <g class="rocket-ship" filter="url(#dropShadow)">
+
+    <!-- 1. exhaust (drawn first so it sits behind the nozzle) -->
+    <ellipse class="engine-halo" cx="205" cy="400" rx="50" ry="60" fill="#00ffff" opacity=".6" filter="url(#intenseGlow)"/>
+    <g class="thrust-flame">
+      <polygon points="215,400 20,345 -5,400 20,455" fill="url(#plasmaFlame)" filter="url(#intenseGlow)"/>
+    </g>
+    <g class="thrust-core">
+      <polygon points="215,404 95,372 70,400 95,428" fill="#fff" filter="url(#softGlow)"/>
+    </g>
+
+    <g filter="url(#intenseGlow)">
+      <circle class="trail-particle"    cx="180" cy="380" r="6" fill="#00ffff"/>
+      <circle class="trail-particle d1" cx="150" cy="430" r="8" fill="#ff00a0"/>
+      <circle class="trail-particle d2" cx="120" cy="390" r="5" fill="#fff"/>
+      <circle class="trail-particle d3" cx="90"  cy="420" r="7" fill="#ffd700"/>
+    </g>
+
+    <!-- 2. fins and nozzle -->
+    <g id="engine-mount">
+      <!-- far fins sit darker to push them back in depth -->
+      <path d="M240,430 L200,530 C230,530 280,490 320,440 Z" fill="url(#rocketRed)" stroke="#4d000f" stroke-width="2"/>
+      <path d="M240,370 L200,270 C230,270 280,310 320,360 Z" fill="url(#rocketRed)" stroke="#4d000f" stroke-width="2"/>
+      <!-- fin shading + gold tips -->
+      <path d="M240,430 L200,530 L212,530 L252,432 Z" fill="url(#rocketRedDark)" opacity=".7"/>
+      <path d="M240,370 L200,270 L212,270 L252,368 Z" fill="url(#rocketRedDark)" opacity=".7"/>
+      <path d="M210 280 L245 365" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+      <path d="M210 520 L245 435" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+      <circle cx="203" cy="271" r="4" fill="url(#goldAccent)"/>
+      <circle cx="203" cy="529" r="4" fill="url(#goldAccent)"/>
+
+      <!-- nozzle -->
+      <path d="M210,360 L250,370 L250,430 L210,440 Z" fill="url(#goldAccent)" stroke="#332600" stroke-width="2"/>
+      <ellipse cx="210" cy="400" rx="10" ry="40" fill="#0b0b12" stroke="url(#goldAccent)" stroke-width="2"/>
+      <ellipse cx="208" cy="400" rx="5" ry="26" fill="#00ffff" opacity=".7" filter="url(#softGlow)"/>
+    </g>
+
+    <!-- 3. fuselage -->
+    <g id="fuselage">
+      <path d="M240,360 C320,330 460,330 550,345 C620,355 660,380 690,400 C660,420 620,445 550,455 C460,470 320,470 240,440 Z"
+            fill="url(#rocketHull)" stroke="#2e2e42" stroke-width="2.5"/>
+
+      <!-- panel seams, rivets and a red belly stripe, all clipped to the hull -->
+      <g clip-path="url(#hullClip)">
+        <rect x="230" y="425" width="360" height="9" fill="#ff0033" opacity=".85"/>
+        <rect x="230" y="425" width="360" height="2" fill="#fff" opacity=".5"/>
+        <g stroke="#6b6b8c" stroke-width="1.2" opacity=".7">
+          <line x1="300" y1="330" x2="300" y2="470"/>
+          <line x1="455" y1="330" x2="455" y2="470"/>
+          <line x1="530" y1="330" x2="530" y2="470"/>
+        </g>
+        <g fill="#5a5a78">
+          <circle cx="294" cy="372" r="1.8"/><circle cx="294" cy="428" r="1.8"/>
+          <circle cx="461" cy="360" r="1.8"/><circle cx="461" cy="440" r="1.8"/>
+          <circle cx="524" cy="362" r="1.8"/><circle cx="524" cy="438" r="1.8"/>
+        </g>
+      </g>
+
+      <!-- red nose cone and gold collar -->
+      <path d="M580,350 C630,365 670,385 700,400 C670,415 630,435 580,450 C600,415 600,385 580,350 Z" fill="url(#rocketRed)" stroke="#660014" stroke-width="2"/>
+      <ellipse cx="672" cy="388" rx="16" ry="6" fill="#fff" opacity=".35" transform="rotate(18 672 388)"/>
+      <path d="M580,350 C600,385 600,415 580,450" fill="none" stroke="url(#goldAccent)" stroke-width="5"/>
+
+      <!-- shine and shade -->
+      <path d="M260 352 C340 338 480 338 560 350" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".75"/>
+      <path d="M250 448 C340 462 480 462 550 450" fill="none" stroke="#1a1a2e" stroke-width="3" stroke-linecap="round" opacity=".4"/>
+    </g>
+
+    <!-- 4. anywhere-door hatch -->
+    <g id="anywhere-door-hatch" transform="translate(320,335)">
+      <rect x="0" y="0" width="130" height="130" rx="12" fill="url(#goldAccent)" stroke="#4d3b00" stroke-width="2.5" filter="url(#softGlow)"/>
+      <rect x="8" y="8" width="114" height="114" rx="8" fill="#33001a"/>
+
+      <!-- the portal glimpsed through the open hatch -->
+      <g class="hatch-glow" clip-path="url(#hatchClip)">
+        <rect x="8" y="8" width="114" height="114" fill="url(#hatchGlow)"/>
+        <g class="pv spin-ccw" stroke="#fff" stroke-width="1.5" fill="none" opacity=".7">
+          <ellipse cx="65" cy="65" rx="38" ry="38" stroke-dasharray="6 8"/>
+          <ellipse cx="65" cy="65" rx="20" ry="20" stroke-dasharray="3 6"/>
+        </g>
+        <circle class="pv s1" cx="40" cy="40" r="2" fill="#fff"/>
+        <circle class="pv s2" cx="92" cy="86" r="2" fill="#ffd700"/>
+        <circle class="pv s3" cx="88" cy="38" r="1.6" fill="#00ffff"/>
+      </g>
+
+      <!-- the swinging door -->
+      <g class="door-hatch">
+        <rect x="12" y="12" width="106" height="106" rx="6" fill="url(#doorPink)" stroke="#ff99dd" stroke-width="2"/>
+        <rect x="22" y="22" width="86" height="38" rx="4" fill="none" stroke="#fff" stroke-width="1.5" opacity=".6"/>
+        <rect x="22" y="66" width="86" height="42" rx="4" fill="none" stroke="#fff" stroke-width="1.5" opacity=".6"/>
+        <circle cx="96" cy="65" r="7" fill="url(#goldAccent)" stroke="#4d3b00" stroke-width="1.5"/>
+        <circle cx="94" cy="63" r="2" fill="#fff"/>
+        <rect x="76" y="28" width="24" height="14" rx="2" fill="#001a11" stroke="#00ffaa" stroke-width="1"/>
+        <line class="keypad" x1="80" y1="35" x2="94" y2="35" stroke="#00ffaa" stroke-width="1.5" stroke-dasharray="2 2"/>
+        <!-- hinge barrels -->
+        <rect x="10" y="30" width="5" height="14" rx="2" fill="url(#goldAccent)"/>
+        <rect x="10" y="86" width="5" height="14" rx="2" fill="url(#goldAccent)"/>
+      </g>
+    </g>
+
+    <!-- 5. porthole -->
+    <g id="porthole" transform="translate(485,365)">
+      <circle cx="25" cy="25" r="24" fill="url(#goldAccent)" stroke="#332600" stroke-width="2"/>
+      <circle cx="25" cy="25" r="19" fill="url(#glassTint)" stroke="#00ffff" stroke-width="1.5"/>
+      <circle cx="25" cy="22" r="8"  fill="#002244" opacity=".7"/>
+      <circle cx="25" cy="38" r="13" fill="#002244" opacity=".7"/>
+      <path d="M12 18 C20 10 32 10 38 18 C30 14 18 14 12 18Z" fill="#fff" opacity=".8"/>
+      <!-- rivets on the bezel -->
+      <g fill="#4d3b00"><circle cx="25" cy="3" r="1.4"/><circle cx="25" cy="47" r="1.4"/><circle cx="3" cy="25" r="1.4"/><circle cx="47" cy="25" r="1.4"/></g>
+    </g>
+
+    <!-- 6. bell emblem -->
+    <g id="doraemon-bell-brand" transform="translate(264,385)">
+      <circle cx="15" cy="15" r="13" fill="url(#goldAccent)" stroke="#4d3b00" stroke-width="1.5" filter="url(#softGlow)"/>
+      <line x1="2" y1="11" x2="28" y2="11" stroke="#4d3b00" stroke-width="2"/>
+      <circle cx="15" cy="18" r="3.5" fill="#332600"/>
+      <line x1="15" y1="21.5" x2="15" y2="27" stroke="#4d3b00" stroke-width="2"/>
+      <ellipse cx="10" cy="7" rx="4" ry="2" fill="#fff" opacity=".7" transform="rotate(-25 10 7)"/>
+    </g>
+  </g>
+
+  <!-- ================= FOREGROUND SPARKS ================= -->
+  <g filter="url(#intenseGlow)">
+    <path class="pv s1" d="M780 290Q780 305 795 305Q780 305 780 320Q780 305 765 305Q780 305 780 290Z" fill="#00ffff"/>
+    <path class="pv s2" d="M720 440Q720 458 738 458Q720 458 720 476Q720 458 702 458Q720 458 720 440Z" fill="#ff00a0"/>
+    <path class="pv s3" d="M520 240Q520 252 532 252Q520 252 520 264Q520 252 508 252Q520 252 520 240Z" fill="#ffd700"/>
+    <path class="pv s2" d="M130 250Q130 262 142 262Q130 262 130 274Q130 262 118 262Q130 262 130 250Z" fill="#fff"/>
+  </g>
 </svg>

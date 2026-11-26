@@ -1,18 +1,245 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Dorayaki">
-<defs>
-<radialGradient id="t" cx=".5" cy=".35" r=".7"><stop offset="0" stop-color="#F59E0B"/><stop offset="1" stop-color="#B45309"/></radialGradient>
-<linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D97706"/><stop offset="1" stop-color="#92400E"/></linearGradient>
-</defs>
-<ellipse cx="100" cy="170" rx="74" ry="8" fill="#0C4A6E" opacity=".15"/>
-<g fill="none" stroke="#7DD3FC" stroke-width="4" stroke-linecap="round">
-<path d="M78 70Q70 56 78 44Q86 32 78 20"><animate attributeName="opacity" values="0;.9;0" dur="2.4s" repeatCount="indefinite"/></path>
-<path d="M102 66Q94 52 102 40Q110 28 102 16"><animate attributeName="opacity" values="0;.9;0" dur="2.4s" begin=".6s" repeatCount="indefinite"/></path>
-<path d="M126 70Q118 56 126 44Q134 32 126 20"><animate attributeName="opacity" values="0;.9;0" dur="2.4s" begin="1.2s" repeatCount="indefinite"/></path>
-</g>
-<path d="M28 134Q28 160 100 162Q172 160 172 134Q172 118 100 118Q28 118 28 134Z" fill="url(#b)" stroke="#78350F" stroke-width="4" stroke-linejoin="round"/>
-<ellipse cx="100" cy="122" rx="68" ry="16" fill="#7F1D1D" stroke="#450A0A" stroke-width="3"/>
-<g fill="#991B1B"><ellipse cx="70" cy="122" rx="8" ry="3"/><ellipse cx="104" cy="126" rx="9" ry="3"/><ellipse cx="136" cy="120" rx="8" ry="3"/></g>
-<path d="M28 116Q28 74 100 72Q172 74 172 116Q172 132 100 132Q28 132 28 116Z" fill="url(#t)" stroke="#78350F" stroke-width="4" stroke-linejoin="round"/>
-<ellipse cx="78" cy="94" rx="30" ry="9" fill="#fff" opacity=".3" transform="rotate(-8 78 94)"/>
-<path d="M44 116Q100 128 156 116" fill="none" stroke="#92400E" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 800" width="100%" height="100%" role="img" aria-labelledby="t d">
+  <title id="t">Dorayaki on a Plate</title>
+  <desc id="d">A freshly baked dorayaki, two golden pancakes sandwiching red bean paste, floats above a ceramic plate with steam rising from it.</desc>
+
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#fff8f0"/>
+      <stop offset="60%" stop-color="#fbeada"/>
+      <stop offset="100%" stop-color="#f3d8c1"/>
+    </radialGradient>
+
+    <linearGradient id="pancakeTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffbf66"/>
+      <stop offset="25%" stop-color="#e68a2e"/>
+      <stop offset="70%" stop-color="#b35900"/>
+      <stop offset="100%" stop-color="#803d00"/>
+    </linearGradient>
+    <!-- the pale, lightly-baked patch every real dorayaki has on top -->
+    <radialGradient id="paleCentre" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#ffd890" stop-opacity=".75"/>
+      <stop offset="100%" stop-color="#ffd890" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pancakeHighlight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffe6b3" stop-opacity=".85"/>
+      <stop offset="100%" stop-color="#ffbf66" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="pancakeBottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#cc6600"/>
+      <stop offset="50%" stop-color="#994700"/>
+      <stop offset="100%" stop-color="#592900"/>
+    </linearGradient>
+    <linearGradient id="spongeEdge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffe3a8"/>
+      <stop offset="100%" stop-color="#f2b866"/>
+    </linearGradient>
+
+    <radialGradient id="ankoCenter" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#5a1827"/>
+      <stop offset="70%" stop-color="#3d0c18"/>
+      <stop offset="100%" stop-color="#24050d"/>
+    </radialGradient>
+    <linearGradient id="ankoShine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8c2b3f" stop-opacity=".8"/>
+      <stop offset="50%" stop-color="#5a1827" stop-opacity=".2"/>
+      <stop offset="100%" stop-color="#1f0208" stop-opacity=".9"/>
+    </linearGradient>
+
+    <radialGradient id="plateGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="75%" stop-color="#f0f4f8"/>
+      <stop offset="100%" stop-color="#d9e2ec"/>
+    </radialGradient>
+    <linearGradient id="plateRim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#bcccdc"/>
+      <stop offset="50%" stop-color="#9fb3c8"/>
+      <stop offset="100%" stop-color="#829ab1"/>
+    </linearGradient>
+    <linearGradient id="glintGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#592900" flood-opacity=".35"/>
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="steamBlur" x="-60%" y="-30%" width="220%" height="160%"><feGaussianBlur stdDeviation="9"/></filter>
+    <filter id="blur14" x="-30%" y="-150%" width="160%" height="400%"><feGaussianBlur stdDeviation="14"/></filter>
+    <filter id="blur4" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="4"/></filter>
+
+    <clipPath id="topClip">
+      <path d="M200,385 C190,330 270,240 450,240 C630,240 710,330 700,385 C690,410 610,422 450,425 C290,422 210,410 200,385 Z"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .pv { transform-box: fill-box; transform-origin: center; }
+
+    .dorayaki-unit { animation: gentleFloat 4s ease-in-out infinite alternate; transform-origin: 450px 420px; }
+    @keyframes gentleFloat {
+      0%   { transform: translateY(6px)   rotate(-.8deg); }
+      100% { transform: translateY(-10px) rotate(1deg); }
+    }
+    /* contact shadow tightens as the dorayaki lifts */
+    .contact { animation: contact 4s ease-in-out infinite alternate; }
+    @keyframes contact { 0% { transform: scale(1.02); opacity: .5; } 100% { transform: scale(.86); opacity: .3; } }
+
+    /* wisps rise from the top of the dome and spread */
+    .steam { transform-box: fill-box; transform-origin: 50% 100%; animation: steam 4s ease-out infinite; opacity: 0; }
+    .st2 { animation-delay: 1.3s; animation-duration: 4.4s; }
+    .st3 { animation-delay: 2.5s; animation-duration: 3.8s; }
+    @keyframes steam {
+      0%   { transform: translateY(0)     scale(.9, .9); opacity: 0; }
+      35%  { opacity: .6; }
+      100% { transform: translateY(-70px) scale(1.4, 1.15); opacity: 0; }
+    }
+
+    /* a glint slides across the crust */
+    .glint { animation: glint 5s ease-in-out infinite; }
+    @keyframes glint { 0%, 55% { transform: translateX(-340px); opacity: 0; } 65% { opacity: 1; } 100% { transform: translateX(340px); opacity: 0; } }
+
+    .sparkle { animation: twinkle 2s ease-in-out infinite alternate; }
+    .delay-1 { animation-delay: .7s; }
+    .delay-2 { animation-delay: 1.4s; }
+    .delay-3 { animation-delay: 2s; }
+    @keyframes twinkle { 0% { opacity: .2; transform: scale(.7); } 100% { opacity: 1; transform: scale(1.3); } }
+
+    .ring-spin { animation: spin 120s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .steam { opacity: .35; } .glint { opacity: 0; } }
+  </style>
+
+  <!-- ================= BACKGROUND ================= -->
+  <rect width="900" height="800" fill="url(#bgGlow)"/>
+
+  <g class="pv ring-spin" opacity=".3" stroke="#e68a2e" stroke-width="1.5" fill="none">
+    <circle cx="450" cy="430" r="360" stroke-dasharray="12 12"/>
+    <circle cx="450" cy="430" r="340" stroke-dasharray="4 8"/>
+  </g>
+
+  <g filter="url(#softGlow)">
+    <path class="pv sparkle"         d="M180 220Q180 235 195 235Q180 235 180 250Q180 235 165 235Q180 235 180 220Z" fill="#ffbf66"/>
+    <path class="pv sparkle delay-1" d="M720 260Q720 278 738 278Q720 278 720 296Q720 278 702 278Q720 278 720 260Z" fill="#e68a2e"/>
+    <path class="pv sparkle delay-2" d="M240 600Q240 612 252 612Q240 612 240 624Q240 612 228 612Q240 612 240 600Z" fill="#ffbf66"/>
+    <path class="pv sparkle delay-3" d="M690 560Q690 570 700 570Q690 570 690 580Q690 570 680 570Q690 570 690 560Z" fill="#fff"/>
+  </g>
+
+  <!-- ================= PLATE ================= -->
+  <g id="plate">
+    <!-- table shadow: blurred (the old drop-shadow filter on this ellipse doubled it) -->
+    <ellipse cx="450" cy="594" rx="360" ry="100" fill="#a07855" opacity=".3" filter="url(#blur14)"/>
+    <ellipse cx="450" cy="570" rx="350" ry="100" fill="url(#plateRim)"/>
+    <ellipse cx="450" cy="565" rx="330" ry="90"  fill="url(#plateGrad)"/>
+    <ellipse cx="450" cy="565" rx="270" ry="70"  fill="none" stroke="#fff" stroke-width="3" opacity=".7"/>
+    <!-- rim catch-light -->
+    <path d="M120 548 Q450 466 780 548" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+  </g>
+
+  <!-- contact shadow on the plate, directly under the dorayaki -->
+  <ellipse class="pv contact" cx="450" cy="556" rx="235" ry="26" fill="#3d0c18" opacity=".4" filter="url(#blur14)"/>
+
+  <!-- ================= STEAM (behind the dome, rising off the crust) ================= -->
+  <g filter="url(#steamBlur)" fill="none" stroke="#fff" stroke-linecap="round">
+    <path class="steam"     d="M390 250 C370 195 425 170 395 115" stroke-width="18"/>
+    <path class="steam st2" d="M470 245 C500 190 450 160 480 100" stroke-width="15"/>
+    <path class="steam st3" d="M540 262 C520 215 560 190 535 145" stroke-width="12"/>
+  </g>
+
+  <!-- ================= DORAYAKI ================= -->
+  <g class="dorayaki-unit" filter="url(#dropShadow)">
+
+    <!-- 1. bottom pancake -->
+    <g id="bottom-shell">
+      <path d="M210,430 C210,490 310,545 450,545 C590,545 690,490 690,430 C690,420 670,410 630,415 C570,422 450,425 450,425 C450,425 330,422 270,415 C230,410 210,420 210,430Z" fill="url(#pancakeBottom)"/>
+      <path d="M225 440 C300 505 450 525 675 440" fill="none" stroke="#e68a2e" stroke-width="4" opacity=".4"/>
+      <!-- a little light on the lower crust -->
+      <path d="M260 488 C330 520 430 532 520 528" fill="none" stroke="#ffbf66" stroke-width="3" stroke-linecap="round" opacity=".3"/>
+    </g>
+
+    <!-- 2. anko -->
+    <g id="anko-layer">
+      <path d="M220,415 C200,395 240,370 310,365 C380,360 520,360 590,365 C660,370 700,395 680,415 C660,435 590,455 450,458 C310,455 240,435 220,415Z"
+            fill="url(#ankoCenter)" stroke="#1a0309" stroke-width="2"/>
+      <path d="M240,410 C290,435 450,448 660,410 C600,430 450,438 240,410Z" fill="url(#ankoShine)"/>
+
+      <!-- azuki beans, placed inside the band that is actually visible -->
+      <g fill="#2a0710" stroke="#5a1827" stroke-width="1.5">
+        <ellipse cx="288" cy="426" rx="9"  ry="5"   transform="rotate(-15 288 426)"/>
+        <ellipse cx="338" cy="439" rx="11" ry="6"   transform="rotate(10 338 439)"/>
+        <ellipse cx="395" cy="446" rx="10" ry="5.5" transform="rotate(-5 395 446)"/>
+        <ellipse cx="452" cy="448" rx="12" ry="6"   transform="rotate(6 452 448)"/>
+        <ellipse cx="508" cy="446" rx="11" ry="5.5" transform="rotate(-10 508 446)"/>
+        <ellipse cx="562" cy="440" rx="10" ry="6"   transform="rotate(14 562 440)"/>
+        <ellipse cx="612" cy="430" rx="9"  ry="5"   transform="rotate(-8 612 430)"/>
+        <g fill="#a33a50" stroke="none">
+          <ellipse cx="285" cy="424" rx="3"   ry="1.4"/>
+          <ellipse cx="335" cy="437" rx="3.5" ry="1.6"/>
+          <ellipse cx="449" cy="446" rx="3.5" ry="1.6"/>
+          <ellipse cx="505" cy="444" rx="3"   ry="1.4"/>
+          <ellipse cx="559" cy="438" rx="3"   ry="1.4"/>
+        </g>
+      </g>
+    </g>
+
+    <!-- 3. sponge-cake lip: the pale inside of each pancake, now drawn where it can be seen -->
+    <g id="sponge-cake-rim">
+      <!-- under the top pancake -->
+      <path d="M200 385 C210 410 290 422 450 425 C610 422 690 410 700 385 L698 397 C688 420 610 434 450 437 C290 434 212 420 202 397Z" fill="url(#spongeEdge)"/>
+      <path d="M204 394 C220 416 295 430 450 433 C605 430 680 416 696 394" fill="none" stroke="#fff3d6" stroke-width="2" opacity=".6"/>
+      <!-- on top of the bottom pancake -->
+      <path d="M222 418 C240 437 310 455 450 458 C590 455 660 437 678 418 L685 428 C665 452 590 471 450 474 C310 471 235 452 215 428Z" fill="url(#spongeEdge)"/>
+      <path d="M232 432 C262 452 330 468 450 470 C570 468 638 452 668 432" fill="none" stroke="#b36b1a" stroke-width="2" opacity=".35"/>
+    </g>
+
+    <!-- 4. top pancake -->
+    <g id="top-shell">
+      <path d="M200,385 C190,330 270,240 450,240 C630,240 710,330 700,385 C690,410 610,422 450,425 C290,422 210,410 200,385Z" fill="url(#pancakeTop)"/>
+
+      <g clip-path="url(#topClip)">
+        <ellipse cx="450" cy="315" rx="190" ry="62" fill="url(#paleCentre)"/>
+        <!-- tiny pores from the griddle -->
+        <g fill="#8a4300" opacity=".28">
+          <circle cx="330" cy="300" r="2"/><circle cx="372" cy="278" r="1.6"/><circle cx="420" cy="292" r="2.2"/>
+          <circle cx="478" cy="270" r="1.8"/><circle cx="530" cy="296" r="2"/><circle cx="575" cy="320" r="1.7"/>
+          <circle cx="300" cy="346" r="2"/><circle cx="360" cy="338" r="1.8"/><circle cx="520" cy="345" r="2.2"/>
+          <circle cx="610" cy="352" r="1.8"/><circle cx="270" cy="370" r="1.5"/><circle cx="640" cy="374" r="1.5"/>
+          <circle cx="410" cy="352" r="1.6"/><circle cx="470" cy="336" r="2"/>
+        </g>
+        <!-- moving glint -->
+        <g class="glint"><rect x="400" y="236" width="90" height="190" fill="url(#glintGrad)" transform="skewX(-22)"/></g>
+      </g>
+
+      <path d="M230,350 C250,290 330,255 450,255 C570,255 650,290 670,350 C590,320 450,310 230,350Z" fill="url(#pancakeHighlight)"/>
+
+      <!-- crease and crust edge -->
+      <path d="M205 385 C280 412 450 418 695 385" fill="none" stroke="#592900" stroke-width="4" opacity=".4"/>
+      <path d="M200 385 C190 330 270 240 450 240 C630 240 710 330 700 385" fill="none" stroke="#803d00" stroke-width="3" opacity=".5"/>
+    </g>
+
+    <!-- 5. branded bell stamp, foreshortened to sit on the dome -->
+    <g id="stamp" opacity=".3" transform="translate(450,322) scale(1,.82) rotate(-4)">
+      <circle r="24" fill="#331400"/>
+      <path d="M-24 -4 Q0 6 24 -4" fill="none" stroke="#d9993f" stroke-width="3"/>
+      <circle cy="9" r="5" fill="#d9993f"/>
+      <line y1="14" y2="22" stroke="#d9993f" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- ================= CRUMBS ================= -->
+  <g fill="#cc6600" opacity=".85">
+    <ellipse cx="280" cy="548" rx="4" ry="2.5" transform="rotate(15 280 548)"/>
+    <ellipse cx="300" cy="558" rx="3" ry="2"   transform="rotate(-20 300 558)"/>
+    <ellipse cx="610" cy="544" rx="5" ry="3"   transform="rotate(10 610 544)"/>
+    <ellipse cx="630" cy="551" rx="3" ry="2"   transform="rotate(-5 630 551)"/>
+    <ellipse cx="560" cy="566" rx="2.5" ry="1.6" transform="rotate(25 560 566)"/>
+    <circle cx="265" cy="533" r="2.5" fill="#3d0c18"/>
+    <circle cx="645" cy="529" r="3"   fill="#3d0c18"/>
+    <circle cx="350" cy="570" r="2"   fill="#3d0c18"/>
+  </g>
 </svg>
