@@ -1,0 +1,294 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 800" width="100%" height="100%" role="img" aria-labelledby="t d">
+  <title id="t">What-If Machine</title>
+  <desc id="d">A red retro cabinet topped by a glowing crystal orb with a giant question mark, with brass pipes, a simulator screen and a control panel, floating in front of a multiverse portal.</desc>
+
+  <defs>
+    <radialGradient id="spaceBg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#2d004d"/>
+      <stop offset="45%" stop-color="#120026"/>
+      <stop offset="100%" stop-color="#03000a"/>
+    </radialGradient>
+    <radialGradient id="portalGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="25%" stop-color="#ff00a0"/>
+      <stop offset="65%" stop-color="#7000ff"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="boxFront" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff4d79"/>
+      <stop offset="40%" stop-color="#e60039"/>
+      <stop offset="80%" stop-color="#990026"/>
+      <stop offset="100%" stop-color="#5a0016"/>
+    </linearGradient>
+    <linearGradient id="boxTop" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff80a0"/>
+      <stop offset="50%" stop-color="#ff1a53"/>
+      <stop offset="100%" stop-color="#b3002d"/>
+    </linearGradient>
+    <linearGradient id="boxSide" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a6002c"/>
+      <stop offset="100%" stop-color="#400011"/>
+    </linearGradient>
+    <linearGradient id="goldBrass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff5cc"/>
+      <stop offset="40%" stop-color="#ffd700"/>
+      <stop offset="80%" stop-color="#ccab00"/>
+      <stop offset="100%" stop-color="#665500"/>
+    </linearGradient>
+    <linearGradient id="screenGlass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#001a11"/>
+      <stop offset="50%" stop-color="#004d33"/>
+      <stop offset="100%" stop-color="#00100a"/>
+    </linearGradient>
+    <linearGradient id="pipeGold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d4a000"/>
+      <stop offset="50%" stop-color="#fff275"/>
+      <stop offset="100%" stop-color="#806000"/>
+    </linearGradient>
+    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#00ffaa" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#00ffaa" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#00ffaa" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="glassClip"><rect x="40" y="32" width="220" height="84" rx="8"/></clipPath>
+
+    <filter id="intenseGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="b1"/>
+      <feGaussianBlur stdDeviation="20" result="b2"/>
+      <feMerge><feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="blur20" x="-30%" y="-200%" width="160%" height="500%"><feGaussianBlur stdDeviation="20"/></filter>
+    <filter id="dropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#000" flood-opacity=".85"/>
+    </filter>
+  </defs>
+
+  <style>
+    .pv { transform-box: fill-box; transform-origin: center; }
+
+    .what-if-unit { animation: hoverFloating 4.5s ease-in-out infinite alternate; transform-origin: 450px 420px; }
+    @keyframes hoverFloating {
+      0%   { transform: translateY(12px)  rotate(-1.2deg); }
+      100% { transform: translateY(-16px) rotate(1.5deg); }
+    }
+    .shadow { animation: shadow 4.5s ease-in-out infinite alternate; }
+    @keyframes shadow { 0% { transform: scale(1.08); opacity: .8; } 100% { transform: scale(.82); opacity: .45; } }
+
+    .portal-pulse { animation: pulsePortal 4s ease-in-out infinite alternate; transform-origin: 450px 380px; }
+    @keyframes pulsePortal { 0% { transform: scale(.92); opacity: .6; } 100% { transform: scale(1.1); opacity: .95; } }
+    .ring-spin-cw  { animation: spin 40s linear infinite; transform-origin: 450px 380px; }
+    .ring-spin-ccw { animation: spin 26s linear infinite reverse; transform-origin: 450px 380px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* only the orb pulses; the stand underneath stays rigid */
+    .orb { animation: orb 2s ease-in-out infinite alternate; }
+    @keyframes orb { 0% { transform: scale(.96); opacity: .85; } 100% { transform: scale(1.08); opacity: 1; } }
+    .orb-halo { animation: halo 2s ease-in-out infinite alternate; }
+    @keyframes halo { 0% { opacity: .35; transform: scale(.9); } 100% { opacity: .9; transform: scale(1.25); } }
+    .qm { animation: qm 3s ease-in-out infinite alternate; }
+    @keyframes qm { 0% { transform: rotate(-6deg); } 100% { transform: rotate(6deg); } }
+
+    /* energy runs up the pipes */
+    .flow { stroke-dasharray: 6 22; animation: flow 1.2s linear infinite; }
+    @keyframes flow { to { stroke-dashoffset: -28; } }
+    .spark { animation: spark 1.8s ease-out infinite; }
+    .sp2 { animation-delay: .6s; } .sp3 { animation-delay: 1.2s; }
+    @keyframes spark { 0% { transform: translateY(0) scale(1); opacity: 0; } 20% { opacity: 1; } 100% { transform: translateY(-46px) scale(.3); opacity: 0; } }
+
+    /* simulator screen cycles through scenarios */
+    .scn { opacity: 0; animation: scn 9s steps(1) infinite; }
+    .s0 { animation-delay: 0s; } .s1 { animation-delay: 3s; } .s2 { animation-delay: 6s; }
+    @keyframes scn { 0% { opacity: 1; } 33.3%, 100% { opacity: 0; } }
+    .blink { animation: blink 1.4s steps(2, start) infinite; }
+    @keyframes blink { 50% { opacity: .35; } }
+    .wave { stroke-dasharray: 14 6; animation: wave .9s linear infinite; }
+    @keyframes wave { to { stroke-dashoffset: -20; } }
+    .scanband { animation: band 3s linear infinite; }
+    @keyframes band { 0% { transform: translateY(-30px); } 100% { transform: translateY(120px); } }
+
+    .slide1 { animation: slide 2.6s ease-in-out infinite alternate; }
+    .slide2 { animation: slide 3.4s ease-in-out infinite alternate-reverse; }
+    @keyframes slide { 0% { transform: translateY(0); } 100% { transform: translateY(10px); } }
+    .key { animation: key 2.4s steps(1) infinite; }
+    .k2 { animation-delay: .4s; } .k3 { animation-delay: .8s; } .k4 { animation-delay: 1.2s; } .k5 { animation-delay: 1.6s; } .k6 { animation-delay: 2s; }
+    @keyframes key { 0% { fill: #00ffaa; } 16.6%, 100% { fill: #333; } }
+    .knob { animation: spin 8s linear infinite; }
+    .exec { animation: exec 1s ease-in-out infinite alternate; }
+    @keyframes exec { 0% { opacity: .8; } 100% { opacity: 1; transform: scale(1.1); } }
+
+    .sparkle-1 { animation: twinkle 1.5s ease-in-out infinite alternate; }
+    .sparkle-2 { animation: twinkle 2.3s ease-in-out infinite alternate .5s; }
+    .sparkle-3 { animation: twinkle 3s ease-in-out infinite alternate 1s; }
+    @keyframes twinkle { 0% { opacity: .2; transform: scale(.6); } 100% { opacity: 1; transform: scale(1.4); } }
+
+    .particle-rise { animation: rise 3.8s ease-out infinite; }
+    .delay-1 { animation-delay: .9s; } .delay-2 { animation-delay: 1.8s; } .delay-3 { animation-delay: 2.7s; }
+    @keyframes rise {
+      0%   { transform: translateY(0) scale(.5);       opacity: 0; }
+      50%  { opacity: .9; }
+      100% { transform: translateY(-120px) scale(1.2); opacity: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .s0 { opacity: 1; } }
+  </style>
+
+  <!-- ================= SPACE ================= -->
+  <rect width="900" height="800" fill="url(#spaceBg)"/>
+  <g opacity=".7">
+    <circle class="pv sparkle-1" cx="120" cy="140" r="1.5" fill="#fff"/>
+    <circle class="pv sparkle-2" cx="780" cy="160" r="2"   fill="#00ffff"/>
+    <circle class="pv sparkle-3" cx="150" cy="640" r="1.2" fill="#ff00a0"/>
+    <circle class="pv sparkle-1" cx="820" cy="580" r="1.8" fill="#fff"/>
+    <circle class="pv sparkle-2" cx="230" cy="220" r="1"   fill="#fff"/>
+    <circle class="pv sparkle-3" cx="710" cy="280" r="1.4" fill="#7000ff"/>
+    <circle class="pv sparkle-1" cx="60"  cy="400" r="1.2" fill="#00ffff"/>
+    <circle class="pv sparkle-2" cx="850" cy="400" r="1.3" fill="#fff"/>
+    <circle class="pv sparkle-3" cx="450" cy="50"  r="1.1" fill="#ff00a0"/>
+    <circle class="pv sparkle-1" cx="560" cy="760" r="1.2" fill="#fff"/>
+  </g>
+
+  <ellipse class="pv shadow" cx="450" cy="680" rx="300" ry="32" fill="#000" opacity=".75" filter="url(#blur20)"/>
+
+  <!-- ================= PORTAL ================= -->
+  <g id="multiverse-portal">
+    <circle class="portal-pulse" cx="450" cy="380" r="280" fill="url(#portalGlow)"/>
+    <g class="ring-spin-cw" opacity=".6" stroke="#00ffff" stroke-width="1.5" fill="none">
+      <circle cx="450" cy="380" r="250" stroke-dasharray="20 10 50 15"/>
+      <circle cx="450" cy="380" r="200" stroke-dasharray="12 8 30 12"/>
+      <g font-family="sans-serif" font-weight="bold" font-size="16" fill="#00ffff" stroke="none" text-anchor="middle" dominant-baseline="central"><text x="450.0" y="150.0">?</text><text x="565.0" y="180.8">?</text><text x="649.2" y="265.0">?</text><text x="680.0" y="380.0">?</text><text x="649.2" y="495.0">?</text><text x="565.0" y="579.2">?</text><text x="450.0" y="610.0">?</text><text x="335.0" y="579.2">?</text><text x="250.8" y="495.0">?</text><text x="220.0" y="380.0">?</text><text x="250.8" y="265.0">?</text><text x="335.0" y="180.8">?</text></g>
+    </g>
+    <g class="ring-spin-ccw" opacity=".5" stroke="#ff00a0" stroke-width="1.5" fill="none">
+      <circle cx="450" cy="380" r="220" stroke-dasharray="40 15 10 15"/>
+      <circle cx="450" cy="380" r="170" stroke-dasharray="6 10"/>
+    </g>
+  </g>
+
+  <!-- ================= MACHINE ================= -->
+  <g class="what-if-unit" filter="url(#dropShadow)">
+
+    <!-- pipes -->
+    <g id="pipes">
+      <path d="M320 380 C260 340 240 260 270 200" fill="none" stroke="url(#pipeGold)" stroke-width="16" stroke-linecap="round"/>
+      <path d="M320 380 C260 340 240 260 270 200" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+      <path class="flow" d="M320 380 C260 340 240 260 270 200" fill="none" stroke="#00ffff" stroke-width="4" stroke-linecap="round"/>
+      <path d="M580 380 C640 340 660 260 630 200" fill="none" stroke="url(#pipeGold)" stroke-width="16" stroke-linecap="round"/>
+      <path d="M580 380 C640 340 660 260 630 200" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".6"/>
+      <path class="flow" d="M580 380 C640 340 660 260 630 200" fill="none" stroke="#ff00a0" stroke-width="4" stroke-linecap="round"/>
+      <ellipse cx="270" cy="200" rx="14" ry="6" fill="#00ffff" filter="url(#softGlow)"/>
+      <ellipse cx="630" cy="200" rx="14" ry="6" fill="#ff00a0" filter="url(#softGlow)"/>
+      <g filter="url(#softGlow)">
+        <circle class="pv spark"     cx="270" cy="196" r="3" fill="#7ff3ff"/>
+        <circle class="pv spark sp2" cx="266" cy="196" r="2" fill="#fff"/>
+        <circle class="pv spark sp3" cx="275" cy="196" r="2.5" fill="#00ffff"/>
+        <circle class="pv spark sp2" cx="630" cy="196" r="3" fill="#ff7fd0"/>
+        <circle class="pv spark sp3" cx="634" cy="196" r="2" fill="#fff"/>
+        <circle class="pv spark"     cx="625" cy="196" r="2.5" fill="#ff00a0"/>
+      </g>
+    </g>
+
+    <!-- cabinet -->
+    <g id="machine-body">
+      <polygon points="260,420 340,360 340,560 260,610" fill="url(#boxSide)" stroke="#33000d" stroke-width="2"/>
+      <!-- side vents, sheared onto the side wall -->
+      <g transform="matrix(1 -.75 0 1 260 420)" stroke="#1d0008" stroke-width="5" stroke-linecap="round" opacity=".75">
+        <line x1="18" y1="60"  x2="62" y2="60"/><line x1="18" y1="82"  x2="62" y2="82"/>
+        <line x1="18" y1="104" x2="62" y2="104"/><line x1="18" y1="126" x2="62" y2="126"/>
+        <line x1="18" y1="148" x2="62" y2="148"/>
+      </g>
+      <polygon points="260,420 340,360 640,380 560,450" fill="url(#boxTop)" stroke="#33000d" stroke-width="2"/>
+      <polygon points="340,360 640,380 640,580 340,560" fill="url(#boxFront)" stroke="#33000d" stroke-width="2.5"/>
+      <path d="M340 360 L640 380 L640 580 L340 560Z" fill="none" stroke="url(#goldBrass)" stroke-width="6"/>
+      <path d="M260 420 L340 360 L560 450 L260 610Z" fill="none" stroke="url(#goldBrass)" stroke-width="2" opacity=".4"/>
+      <!-- corner rivets -->
+      <g fill="url(#goldBrass)" stroke="#4d3b00" stroke-width=".8">
+        <circle cx="352" cy="373" r="3.5"/><circle cx="627" cy="392" r="3.5"/>
+        <circle cx="352" cy="548" r="3.5"/><circle cx="627" cy="568" r="3.5"/>
+      </g>
+    </g>
+
+    <!-- emitter stand: base on the top face, column, cradle, orb -->
+    <g id="question-mark-emitter">
+      <ellipse cx="450" cy="373" rx="46" ry="12" fill="#7a0020" opacity=".6"/>
+      <ellipse cx="450" cy="369" rx="38" ry="11" fill="url(#goldBrass)" stroke="#4d3b00" stroke-width="2"/>
+      <rect x="438" y="300" width="24" height="69" fill="url(#pipeGold)" stroke="#4d3b00" stroke-width="1.5"/>
+      <ellipse cx="450" cy="348" rx="14" ry="4"   fill="url(#goldBrass)" stroke="#4d3b00" stroke-width="1"/>
+      <ellipse cx="450" cy="324" rx="14" ry="4"   fill="url(#goldBrass)" stroke="#4d3b00" stroke-width="1"/>
+      <ellipse cx="450" cy="305" rx="32" ry="10" fill="url(#goldBrass)" stroke="#4d3b00" stroke-width="2"/>
+      <rect x="432" y="285" width="36" height="20" fill="url(#goldBrass)" stroke="#4d3b00" stroke-width="1.5"/>
+      <ellipse cx="450" cy="285" rx="18" ry="6" fill="#fff"/>
+
+      <circle class="pv orb-halo" cx="450" cy="230" r="70" fill="url(#portalGlow)" opacity=".5"/>
+      <g class="pv orb">
+        <circle cx="450" cy="230" r="52" fill="url(#portalGlow)" filter="url(#intenseGlow)"/>
+        <circle cx="450" cy="230" r="48" fill="none" stroke="#00ffff" stroke-width="2" opacity=".8"/>
+        <ellipse cx="432" cy="208" rx="14" ry="8" fill="#fff" opacity=".55" transform="rotate(-35 432 208)"/>
+      </g>
+      <text class="pv qm" x="450" y="258" font-family="'Impact','Arial Black',sans-serif" font-size="80" font-weight="900"
+            fill="#fff" stroke="#ff00a0" stroke-width="3" text-anchor="middle" filter="url(#softGlow)">?</text>
+    </g>
+
+    <!-- front panel: laid out flat, then sheared onto the face (slope 20/300) -->
+    <g id="front-panel" transform="matrix(1 .0667 0 1 340 360)">
+      <rect x="30" y="22" width="240" height="104" rx="12" fill="#1a1a1a" stroke="url(#goldBrass)" stroke-width="4"/>
+      <rect x="40" y="32" width="220" height="84" rx="8" fill="url(#screenGlass)" stroke="#003322" stroke-width="2"/>
+
+      <g clip-path="url(#glassClip)">
+        <path d="M40 42H260M40 50H260M40 58H260M40 66H260M40 74H260M40 82H260M40 90H260M40 98H260M40 106H260" stroke="#00ffaa" stroke-width=".5" opacity=".25"/>
+        <rect class="scanband" x="40" y="32" width="220" height="30" fill="url(#scan)"/>
+        <g font-family="monospace" font-size="10">
+          <text class="blink" x="50" y="48" font-size="12" font-weight="bold" fill="#00ffaa">QUERY: WHAT IF...?</text>
+          <g class="scn s0"><text x="50" y="66" fill="#00cc88">&gt; SIMULATING REALITY #2112</text><text x="50" y="80" fill="#00cc88">&gt; NOBITA PASSED THE TEST</text></g><g class="scn s1"><text x="50" y="66" fill="#00cc88">&gt; SIMULATING REALITY #0451</text><text x="50" y="80" fill="#00cc88">&gt; THE MOON WAS A GIANT LAMP</text></g><g class="scn s2"><text x="50" y="66" fill="#00cc88">&gt; SIMULATING REALITY #3000</text><text x="50" y="80" fill="#00cc88">&gt; DINOSAURS LEARNED TO CODE</text></g>
+        </g>
+        <path class="wave" d="M50 104 Q65 90 80 104 T110 104 T140 104 T170 90 T200 108 T230 94 L250 104" fill="none" stroke="#ff00a0" stroke-width="2" filter="url(#softGlow)"/>
+        <path d="M40 32 L170 32 L40 112Z" fill="#fff" opacity=".07"/>
+      </g>
+
+      <!-- control plate -->
+      <rect x="30" y="140" width="240" height="48" rx="4" fill="url(#goldBrass)" stroke="#4d3b00" stroke-width="1.5"/>
+      <circle class="pv exec" cx="56" cy="164" r="12" fill="#ff0040" stroke="#800020" stroke-width="2" filter="url(#softGlow)"/>
+      <ellipse cx="53" cy="160" rx="4" ry="2" fill="#fff" opacity=".8"/>
+
+      <circle class="pv sparkle-1" cx="84"  cy="164" r="5" fill="#00ffff" stroke="#008080"/>
+      <circle class="pv sparkle-2" cx="99"  cy="164" r="5" fill="#ff00a0" stroke="#800050"/>
+      <circle class="pv sparkle-3" cx="114" cy="164" r="5" fill="#ffcc00" stroke="#806600"/>
+
+      <rect x="137" y="153" width="8" height="22" fill="#222" rx="2"/>
+      <rect class="slide1" x="135" y="155" width="12" height="6" fill="#aaa" rx="1"/>
+      <rect x="154" y="153" width="8" height="22" fill="#222" rx="2"/>
+      <rect class="slide2" x="152" y="155" width="12" height="6" fill="#aaa" rx="1"/>
+
+      <g>
+        <rect class="key"      x="178" y="153" width="9" height="9" fill="#333"/>
+        <rect class="key k2"   x="191" y="153" width="9" height="9" fill="#333"/>
+        <rect class="key k3"   x="204" y="153" width="9" height="9" fill="#333"/>
+        <rect class="key k6"   x="178" y="166" width="9" height="9" fill="#333"/>
+        <rect class="key k5"   x="191" y="166" width="9" height="9" fill="#333"/>
+        <rect class="key k4"   x="204" y="166" width="9" height="9" fill="#333"/>
+      </g>
+
+      <g transform="translate(244 164)">
+        <circle r="11" fill="#2b2000" stroke="#4d3b00" stroke-width="1.5"/>
+        <g class="pv knob"><line x1="0" y1="0" x2="0" y2="-8" stroke="#ffd700" stroke-width="2.5" stroke-linecap="round"/></g>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= FOREGROUND ================= -->
+  <g filter="url(#intenseGlow)">
+    <text class="pv sparkle-1" x="210" y="320" font-family="sans-serif" font-weight="bold" font-size="28" fill="#00ffff">?</text>
+    <text class="pv sparkle-2" x="680" y="300" font-family="sans-serif" font-weight="bold" font-size="34" fill="#ff00a0">?</text>
+    <text class="pv sparkle-3" x="310" y="180" font-family="sans-serif" font-weight="bold" font-size="22" fill="#fff">?</text>
+    <text class="pv sparkle-1" x="720" y="470" font-family="sans-serif" font-weight="bold" font-size="24" fill="#7000ff">?</text>
+
+    <circle class="pv particle-rise"         cx="330" cy="620" r="4"   fill="#00ffff"/>
+    <circle class="pv particle-rise delay-1" cx="590" cy="630" r="4.5" fill="#ff00a0"/>
+    <circle class="pv particle-rise delay-2" cx="450" cy="580" r="3"   fill="#fff"/>
+    <circle class="pv particle-rise delay-3" cx="250" cy="530" r="5"   fill="#7000ff"/>
+    <circle class="pv particle-rise delay-1" cx="670" cy="510" r="3.5" fill="#00ffaa"/>
+    <circle class="pv particle-rise delay-3" cx="520" cy="650" r="3"   fill="#ffcc00"/>
+  </g>
+</svg>

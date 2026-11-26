@@ -1,0 +1,285 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="100%" height="100%" role="img" aria-labelledby="t d">
+  <title id="t">Bamboo-Copter Hologram</title>
+  <desc id="d">A golden bamboo-copter hovers above a glowing holographic platform, its blades whirling in a dark starry void.</desc>
+
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#1a0033"/>
+      <stop offset="50%" stop-color="#0d001a"/>
+      <stop offset="100%" stop-color="#05000a"/>
+    </radialGradient>
+
+    <linearGradient id="goldBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff275"/>
+      <stop offset="30%" stop-color="#ffd700"/>
+      <stop offset="70%" stop-color="#d4a000"/>
+      <stop offset="100%" stop-color="#806000"/>
+    </linearGradient>
+    <!-- horizontal sweep so the rod reads as a cylinder -->
+    <linearGradient id="rodGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8a6500"/>
+      <stop offset="30%" stop-color="#ffe45c"/>
+      <stop offset="55%" stop-color="#ffd700"/>
+      <stop offset="100%" stop-color="#6b5000"/>
+    </linearGradient>
+    <radialGradient id="goldCap" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="30%" stop-color="#ffe650"/>
+      <stop offset="70%" stop-color="#cca300"/>
+      <stop offset="100%" stop-color="#665200"/>
+    </radialGradient>
+
+    <linearGradient id="bambooBlade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e6b800"/>
+      <stop offset="20%" stop-color="#ffe680"/>
+      <stop offset="50%" stop-color="#f0c233"/>
+      <stop offset="80%" stop-color="#d49b00"/>
+      <stop offset="100%" stop-color="#a37500"/>
+    </linearGradient>
+    <linearGradient id="bladeEdge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity=".8"/>
+      <stop offset="50%" stop-color="#ffe680" stop-opacity=".2"/>
+      <stop offset="100%" stop-color="#805c00" stop-opacity=".6"/>
+    </linearGradient>
+
+    <linearGradient id="holoRing1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00ffff" stop-opacity=".9"/>
+      <stop offset="50%" stop-color="#b026ff" stop-opacity=".6"/>
+      <stop offset="100%" stop-color="#ff00a0" stop-opacity=".1"/>
+    </linearGradient>
+    <radialGradient id="energyCore" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00ffff" stop-opacity=".8"/>
+      <stop offset="40%" stop-color="#8000ff" stop-opacity=".4"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <!-- translucent disc the blades sweep -->
+    <radialGradient id="rotorDisc" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe680" stop-opacity=".38"/>
+      <stop offset="70%" stop-color="#ffe680" stop-opacity=".16"/>
+      <stop offset="100%" stop-color="#00ffff" stop-opacity="0"/>
+    </radialGradient>
+    <!-- lift beam from platform to base -->
+    <linearGradient id="beam" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#00ffff" stop-opacity=".35"/>
+      <stop offset="100%" stop-color="#00ffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="intenseGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="b1"/>
+      <feGaussianBlur stdDeviation="18" result="b2"/>
+      <feMerge><feMergeNode in="b2"/><feMergeNode in="b1"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="blur10" x="-40%" y="-200%" width="180%" height="500%"><feGaussianBlur stdDeviation="10"/></filter>
+    <filter id="dropShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="15" stdDeviation="12" flood-color="#000" flood-opacity=".7"/>
+    </filter>
+  </defs>
+
+  <style>
+    /* SVG shapes scale/rotate about their own centre, not the canvas corner */
+    .pv { transform-box: fill-box; transform-origin: center; }
+
+    .copter-unit { animation: hoverFloat 4s ease-in-out infinite alternate; transform-origin: 400px 420px; }
+    @keyframes hoverFloat {
+      0%   { transform: translateY(12px)  rotate(-1deg); }
+      100% { transform: translateY(-18px) rotate(1.5deg); }
+    }
+    /* shadow on the platform grows as the copter sinks */
+    .shadow { animation: shadow 4s ease-in-out infinite alternate; }
+    @keyframes shadow { 0% { transform: scale(1.1); opacity: .65; } 100% { transform: scale(.8); opacity: .35; } }
+
+    /* The rotor is seen side-on from slightly above. A blade turning about the
+       vertical axis shortens (scaleX) while its tips rise and fall (skewY), so
+       it traces an ellipse. Keyframes are the true projection every 15 degrees. */
+    .rotor { transform-box: fill-box; transform-origin: center; animation: spinRotor .5s linear infinite; }
+    @keyframes spinRotor {
+      0.00% { transform: skewY(0.75deg) scaleX(0.991); }
+      4.17% { transform: skewY(2.37deg) scaleX(0.924); }
+      8.33% { transform: skewY(4.39deg) scaleX(0.793); }
+      12.50% { transform: skewY(7.43deg) scaleX(0.609); }
+      16.67% { transform: skewY(13.57deg) scaleX(0.383); }
+      20.83% { transform: skewY(37.22deg) scaleX(0.131); }
+      25.00% { transform: skewY(-37.22deg) scaleX(-0.131); }
+      29.17% { transform: skewY(-13.57deg) scaleX(-0.383); }
+      33.33% { transform: skewY(-7.43deg) scaleX(-0.609); }
+      37.50% { transform: skewY(-4.39deg) scaleX(-0.793); }
+      41.67% { transform: skewY(-2.37deg) scaleX(-0.924); }
+      45.83% { transform: skewY(-0.75deg) scaleX(-0.991); }
+      50.00% { transform: skewY(0.75deg) scaleX(-0.991); }
+      54.17% { transform: skewY(2.37deg) scaleX(-0.924); }
+      58.33% { transform: skewY(4.39deg) scaleX(-0.793); }
+      62.50% { transform: skewY(7.43deg) scaleX(-0.609); }
+      66.67% { transform: skewY(13.57deg) scaleX(-0.383); }
+      70.83% { transform: skewY(37.22deg) scaleX(-0.131); }
+      75.00% { transform: skewY(-37.22deg) scaleX(0.131); }
+      79.17% { transform: skewY(-13.57deg) scaleX(0.383); }
+      83.33% { transform: skewY(-7.43deg) scaleX(0.609); }
+      87.50% { transform: skewY(-4.39deg) scaleX(0.793); }
+      91.67% { transform: skewY(-2.37deg) scaleX(0.924); }
+      95.83% { transform: skewY(-0.75deg) scaleX(0.991); }
+      100.00% { transform: skewY(0.75deg) scaleX(0.991); }
+    }
+    /* dashes race around the blur ellipses instead of the ellipse itself tilting */
+    .blur-a { stroke-dasharray: 120 60 180 40; animation: dashA .35s linear infinite; }
+    .blur-b { stroke-dasharray: 80 100 140 50; animation: dashB .5s linear infinite reverse; }
+    @keyframes dashA { to { stroke-dashoffset: -400; } }
+    @keyframes dashB { to { stroke-dashoffset: -370; } }
+    .disc { animation: disc .25s ease-in-out infinite alternate; }
+    @keyframes disc { 0% { opacity: .75; } 100% { opacity: 1; } }
+
+    /* platform rings: circles flattened into perspective, then spun in-plane */
+    .tech-ring-1 { animation: rotateRing 8s linear infinite; transform-origin: 400px 520px; }
+    .tech-ring-2 { animation: rotateRing 12s linear infinite reverse; transform-origin: 400px 520px; }
+    @keyframes rotateRing {
+      0%   { transform: scaleY(.35) rotate(0deg); }
+      100% { transform: scaleY(.35) rotate(360deg); }
+    }
+    .energy-field { animation: pulseField 2.5s ease-in-out infinite alternate; }
+    @keyframes pulseField { 0% { opacity: .4; transform: scale(.92); } 100% { opacity: .85; transform: scale(1.08); } }
+    .beam { animation: beam 2s ease-in-out infinite alternate; }
+    @keyframes beam { 0% { opacity: .5; } 100% { opacity: 1; } }
+
+    .sparkle-1 { animation: twinkle 1.4s ease-in-out infinite alternate; }
+    .sparkle-2 { animation: twinkle 2.1s ease-in-out infinite alternate .4s; }
+    .sparkle-3 { animation: twinkle 2.8s ease-in-out infinite alternate .9s; }
+    @keyframes twinkle { 0% { opacity: .1; transform: scale(.6); } 100% { opacity: 1; transform: scale(1.4); } }
+
+    .particle-rise { animation: riseUp 3s ease-out infinite; }
+    .p-delay-1 { animation-delay: .8s; } .p-delay-2 { animation-delay: 1.6s; } .p-delay-3 { animation-delay: 2.4s; }
+    @keyframes riseUp {
+      0%   { transform: translateY(0) scale(.5);      opacity: 0; }
+      50%  { opacity: .9; }
+      100% { transform: translateY(-140px) scale(1.2); opacity: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+
+  <!-- ================= BACKGROUND ================= -->
+  <rect width="800" height="800" fill="url(#bgGlow)"/>
+
+  <g opacity=".7">
+    <circle class="pv sparkle-1" cx="120" cy="150" r="1.5" fill="#00ffff"/>
+    <circle class="pv sparkle-2" cx="680" cy="180" r="2"   fill="#ff00a0"/>
+    <circle class="pv sparkle-3" cx="160" cy="620" r="1.2" fill="#fff"/>
+    <circle class="pv sparkle-1" cx="710" cy="580" r="1.8" fill="#00ffff"/>
+    <circle class="pv sparkle-2" cx="250" cy="220" r="1"   fill="#fff"/>
+    <circle class="pv sparkle-3" cx="580" cy="260" r="1.4" fill="#b026ff"/>
+    <circle class="pv sparkle-1" cx="60"  cy="400" r="1.3" fill="#fff"/>
+    <circle class="pv sparkle-2" cx="750" cy="400" r="1.2" fill="#00ffff"/>
+    <circle class="pv sparkle-3" cx="330" cy="90"  r="1.1" fill="#ff00a0"/>
+    <circle class="pv sparkle-1" cx="470" cy="740" r="1.2" fill="#fff"/>
+  </g>
+
+  <!-- ================= HOLOGRAPHIC PLATFORM ================= -->
+  <g id="hologram-platform">
+    <!-- ambient floor darkness -->
+    <ellipse cx="400" cy="585" rx="230" ry="26" fill="#000" opacity=".55" filter="url(#blur10)"/>
+
+    <ellipse class="pv energy-field" cx="400" cy="520" rx="260" ry="85" fill="url(#energyCore)"/>
+
+    <g class="tech-ring-1">
+      <circle cx="400" cy="520" r="220" fill="none" stroke="url(#holoRing1)" stroke-width="2" stroke-dasharray="15 8 4 8 30 15"/>
+      <circle cx="400" cy="520" r="180" fill="none" stroke="#00ffff" stroke-width="1" stroke-dasharray="8 6"/>
+    </g>
+    <g class="tech-ring-2">
+      <circle cx="400" cy="520" r="150" fill="none" stroke="#ff00a0" stroke-width="1.5" stroke-dasharray="20 10 5 10"/>
+      <circle cx="400" cy="520" r="110" fill="none" stroke="#00ffff" stroke-width="2" stroke-dasharray="40 15"/>
+    </g>
+
+    <!-- copter's shadow on the platform -->
+    <ellipse class="pv shadow" cx="400" cy="522" rx="62" ry="12" fill="#000" opacity=".5" filter="url(#blur10)"/>
+
+    <!-- lift beam -->
+    <polygon class="beam" points="330,522 470,522 440,440 360,440" fill="url(#beam)"/>
+
+    <g filter="url(#intenseGlow)">
+      <circle class="pv particle-rise"           cx="350" cy="520" r="3"   fill="#00ffff"/>
+      <circle class="pv particle-rise p-delay-1" cx="450" cy="500" r="2.5" fill="#ff00a0"/>
+      <circle class="pv particle-rise p-delay-2" cx="280" cy="510" r="3.5" fill="#b026ff"/>
+      <circle class="pv particle-rise p-delay-3" cx="510" cy="530" r="2"   fill="#00ffff"/>
+      <circle class="pv particle-rise p-delay-1" cx="400" cy="490" r="4"   fill="#fff"/>
+      <circle class="pv particle-rise p-delay-3" cx="320" cy="535" r="2.5" fill="#fff"/>
+      <circle class="pv particle-rise p-delay-2" cx="480" cy="515" r="3"   fill="#ff00a0"/>
+    </g>
+  </g>
+
+  <!-- ================= BAMBOO COPTER ================= -->
+  <g class="copter-unit" filter="url(#dropShadow)">
+
+    <!-- 1. base -->
+    <g id="suction-base">
+      <ellipse cx="400" cy="452" rx="52" ry="16" fill="#2a1f00" opacity=".6"/>
+      <path d="M340 440 C340 425 460 425 460 440 L468 450 C468 462 332 462 332 450Z" fill="url(#goldBody)" stroke="#594300" stroke-width="1.5"/>
+      <ellipse cx="400" cy="440" rx="60" ry="16" fill="url(#goldCap)" stroke="#ffe680" stroke-width="1"/>
+      <path d="M360 410 C360 398 440 398 440 410 L448 435 C448 445 352 445 352 435Z" fill="url(#goldBody)" stroke="#594300" stroke-width="1.5"/>
+      <ellipse cx="400" cy="410" rx="40" ry="11" fill="url(#goldCap)"/>
+    </g>
+
+    <!-- 2. rod -->
+    <g id="vertical-rod">
+      <path d="M388 300 L412 300 L412 410 L388 410Z" fill="url(#rodGrad)" stroke="#403000" stroke-width="1.5"/>
+      <path d="M393 300 L398 300 L398 410 L393 410Z" fill="#fff" opacity=".5"/>
+      <path d="M406 300 L409 300 L409 410 L406 410Z" fill="#403000" opacity=".4"/>
+      <ellipse cx="400" cy="370" rx="14" ry="4"   fill="url(#goldCap)" stroke="#594300" stroke-width="1"/>
+      <ellipse cx="400" cy="330" rx="13" ry="3.8" fill="url(#goldCap)" stroke="#594300" stroke-width="1"/>
+    </g>
+
+    <!-- 3. hub -->
+    <g id="rotor-hub">
+      <ellipse cx="400" cy="300" rx="18" ry="6" fill="url(#goldBody)" stroke="#403000" stroke-width="1.5"/>
+      <path d="M392 285 L408 285 L412 300 L388 300Z" fill="url(#goldBody)" stroke="#403000" stroke-width="1"/>
+    </g>
+
+    <!-- 4. rotor -->
+    <g id="blades-system">
+      <!-- sweep disc + racing dashes (these are the motion blur) -->
+      <ellipse class="disc" cx="400" cy="300" rx="272" ry="27" fill="url(#rotorDisc)"/>
+      <g opacity=".5" filter="url(#softGlow)" fill="none">
+        <ellipse class="blur-a" cx="400" cy="300" rx="270" ry="26" stroke="#ffe680" stroke-width="7"/>
+        <ellipse class="blur-b" cx="400" cy="300" rx="258" ry="22" stroke="#00ffff" stroke-width="3"/>
+      </g>
+
+      <!-- blades, spinning about the vertical axis -->
+      <g class="rotor">
+        <g id="blade-1">
+          <path d="M400 296 C340 290 200 270 130 285 C120 288 120 308 135 312 C200 320 340 308 400 304Z" fill="url(#bambooBlade)" stroke="#805c00" stroke-width="1.5"/>
+          <path d="M400 296 C340 290 200 270 130 285 C125 286 122 295 130 295 C200 288 340 298 400 300Z" fill="url(#bladeEdge)"/>
+          <path d="M130 285 C120 288 120 308 135 312 C128 305 125 292 130 285Z" fill="#d49b00"/>
+          <!-- bamboo grain -->
+          <g fill="none" stroke="#a37500" stroke-width="1" opacity=".5" stroke-linecap="round">
+            <path d="M385 300 C300 296 210 292 145 297"/><path d="M380 303 C300 304 220 304 150 304"/>
+          </g>
+        </g>
+        <g id="blade-2">
+          <path d="M400 304 C460 308 600 320 665 312 C680 308 680 288 670 285 C600 270 460 290 400 296Z" fill="url(#bambooBlade)" stroke="#805c00" stroke-width="1.5"/>
+          <path d="M400 304 C460 308 600 320 665 312 C675 310 678 301 670 301 C600 308 460 298 400 300Z" fill="url(#bladeEdge)"/>
+          <path d="M665 312 C680 308 680 288 670 285 C672 292 670 305 665 312Z" fill="#a37500"/>
+          <g fill="none" stroke="#a37500" stroke-width="1" opacity=".5" stroke-linecap="round">
+            <path d="M415 300 C500 296 590 292 655 297"/><path d="M420 303 C500 304 580 304 650 304"/>
+          </g>
+        </g>
+      </g>
+
+      <!-- hub clamp stays put while the blades turn -->
+      <ellipse cx="400" cy="300" rx="22" ry="8" fill="url(#goldCap)" stroke="#594300" stroke-width="1.5"/>
+      <circle cx="388" cy="300" r="2.5" fill="#403000"/><circle cx="388" cy="299" r="1" fill="#fff"/>
+      <circle cx="412" cy="300" r="2.5" fill="#403000"/><circle cx="412" cy="299" r="1" fill="#fff"/>
+      <circle cx="400" cy="300" r="4" fill="url(#goldBody)" stroke="#403000" stroke-width="1"/>
+      <ellipse cx="400" cy="285" rx="8" ry="3" fill="#fff" opacity=".8"/>
+    </g>
+  </g>
+
+  <!-- ================= FOREGROUND ================= -->
+  <g filter="url(#intenseGlow)">
+    <circle class="pv sparkle-1" cx="400" cy="290" r="8" fill="#00ffff" opacity=".5"/>
+    <path class="pv sparkle-1" d="M180 240Q180 252 192 252Q180 252 180 264Q180 252 168 252Q180 252 180 240Z" fill="#fff"/>
+    <path class="pv sparkle-2" d="M620 220Q620 235 635 235Q620 235 620 250Q620 235 605 235Q620 235 620 220Z" fill="#00ffff"/>
+    <path class="pv sparkle-3" d="M380 180Q380 190 390 190Q380 190 380 200Q380 190 370 190Q380 190 380 180Z" fill="#ff00a0"/>
+    <path class="pv sparkle-2" d="M660 460Q660 470 670 470Q660 470 660 480Q660 470 650 470Q660 470 660 460Z" fill="#b026ff"/>
+  </g>
+</svg>

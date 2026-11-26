@@ -6,6 +6,7 @@ import CustomCursor from "./components/ui/CustomCursor";
 import IdleEasterEgg from "./components/ui/IdleEasterEgg";
 import VideoBackground from "./components/ui/VideoBackground";
 import TransitionOverlay from "./components/ui/TransitionOverlay";
+import PocketGadgets from "./components/ui/PocketGadgets";
 import { Noto_Sans_JP, Dela_Gothic_One } from "next/font/google";
 
 const notoSansJP = Noto_Sans_JP({ subsets: ["latin"], weight: ["300", "400", "500", "700"], variable: "--font-jp" });
@@ -31,6 +32,7 @@ export default function RootLayout({
         <CustomCursor />
         <AnywhereDoor />
         <Scene />
+        <PocketGadgets />
         <IdleEasterEgg />
 
         <main className="relative z-10 w-full h-full">
