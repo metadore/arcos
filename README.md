@@ -526,7 +526,7 @@ Creative web experiences, applications, interfaces and experiments.
 
 <br><br>
 
-## `ARCOISTRY`
+## `ARCOS`
 
 ### `ARTIST · CODER · CREATOR`
 
